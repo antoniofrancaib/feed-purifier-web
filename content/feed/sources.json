@@ -1,0 +1,163 @@
+{
+  "sources": [
+    {
+      "id": "hn",
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com/",
+      "homepage": "https://news.ycombinator.com/",
+      "lane": "ai"
+    },
+    {
+      "id": "biorxiv",
+      "name": "bioRxiv",
+      "url": "https://www.biorxiv.org/",
+      "homepage": "https://www.biorxiv.org/",
+      "lane": "bio"
+    },
+    {
+      "id": "github",
+      "name": "GitHub research repositories",
+      "url": "https://github.com/",
+      "homepage": "https://github.com/",
+      "lane": "x"
+    },
+    {
+      "id": "hf",
+      "name": "Hugging Face papers",
+      "url": "https://huggingface.co/papers",
+      "homepage": "https://huggingface.co/papers",
+      "lane": "ai"
+    },
+    {
+      "id": "colah",
+      "name": "Chris Olah",
+      "url": "https://colah.github.io/rss.xml",
+      "lane": "ai"
+    },
+    {
+      "id": "karpathy",
+      "name": "Andrej Karpathy",
+      "url": "https://karpathy.bearblog.dev/feed/",
+      "lane": "ai"
+    },
+    {
+      "id": "weng",
+      "name": "Lilian Weng",
+      "url": "https://lilianweng.github.io/index.xml",
+      "lane": "ai"
+    },
+    {
+      "id": "distill",
+      "name": "Distill",
+      "url": "https://distill.pub/rss.xml",
+      "lane": "ai"
+    },
+    {
+      "id": "sander",
+      "name": "Sander Dieleman",
+      "url": "https://sander.ai/feed.xml",
+      "lane": "ai"
+    },
+    {
+      "id": "simon",
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net/atom/everything/",
+      "lane": "ai"
+    },
+    {
+      "id": "bair",
+      "name": "Berkeley AI Research",
+      "url": "https://bair.berkeley.edu/blog/feed.xml",
+      "lane": "ai"
+    },
+    {
+      "id": "raschka",
+      "name": "Sebastian Raschka",
+      "url": "https://magazine.sebastianraschka.com/feed",
+      "lane": "ai"
+    },
+    {
+      "id": "asimov",
+      "name": "Asimov Press",
+      "url": "https://www.asimov.press/feed",
+      "lane": "bio"
+    },
+    {
+      "id": "lowe",
+      "name": "In the Pipeline",
+      "url": "https://www.science.org/blogs/pipeline/feed",
+      "lane": "bio"
+    },
+    {
+      "id": "quanta-bio",
+      "name": "Quanta · Biology",
+      "url": "https://www.quantamagazine.org/biology/feed/",
+      "lane": "bio"
+    },
+    {
+      "id": "alquraishi",
+      "name": "Mohammed AlQuraishi",
+      "url": "https://moalquraishi.wordpress.com/feed/",
+      "lane": "x"
+    },
+    {
+      "id": "blopig",
+      "name": "Oxford Protein Informatics",
+      "url": "https://www.blopig.com/blog/feed/",
+      "lane": "x"
+    },
+    {
+      "id": "elife",
+      "name": "eLife",
+      "url": "https://elifesciences.org/rss/recent.xml",
+      "lane": "bio"
+    },
+    {
+      "id": "arxiv-bio",
+      "name": "arXiv · Quantitative Methods",
+      "url": "https://rss.arxiv.org/rss/q-bio.QM",
+      "lane": "x",
+      "format": "Preprint"
+    },
+    {
+      "id": "yt-karpathy",
+      "name": "Andrej Karpathy · YouTube",
+      "url": "https://www.youtube.com/channel/UCXUPKJO5MZQN11PqgIvyuvQ",
+      "homepage": "https://www.youtube.com/channel/UCXUPKJO5MZQN11PqgIvyuvQ",
+      "lane": "ai",
+      "format": "Video"
+    },
+    {
+      "id": "yt-3b1b",
+      "name": "3Blue1Brown",
+      "url": "https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw",
+      "homepage": "https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw",
+      "lane": "ai",
+      "format": "Video"
+    },
+    {
+      "id": "yt-valence",
+      "name": "Valence Labs",
+      "url": "https://www.youtube.com/channel/UCLbeZhNNKd09FG-pDaagqHA",
+      "homepage": "https://www.youtube.com/channel/UCLbeZhNNKd09FG-pDaagqHA",
+      "lane": "x",
+      "format": "Video"
+    },
+    {
+      "id": "yt-broad",
+      "name": "Broad Institute",
+      "url": "https://www.youtube.com/channel/UCv4IbnP9j9RC_aZAs8wqdeQ",
+      "homepage": "https://www.youtube.com/channel/UCv4IbnP9j9RC_aZAs8wqdeQ",
+      "lane": "bio",
+      "format": "Video"
+    },
+    {
+      "id": "yt-hhmi",
+      "name": "HHMI",
+      "url": "https://www.youtube.com/channel/UCUWJVAgUcpvWwKJXba5XoxQ",
+      "homepage": "https://www.youtube.com/channel/UCUWJVAgUcpvWwKJXba5XoxQ",
+      "lane": "bio",
+      "format": "Video"
+    }
+  ]
+}

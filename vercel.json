@@ -1,0 +1,28 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build:public",
+  "outputDirectory": ".public-dist",
+  "installCommand": "npm ci --no-audit --no-fund",
+  "framework": null,
+  "redirects": [
+    {"source":"/library", "destination":"https://antonio-learn.antoniofrancaib.workers.dev/library", "permanent":false}
+  ],
+  "rewrites": [
+    {"source":"/", "destination":"/index.html"},
+    {"source":"/today", "destination":"/index.html"},
+    {"source":"/watch", "destination":"/index.html"},
+    {"source":"/sources", "destination":"/index.html"},
+    {"source":"/editions", "destination":"/index.html"},
+    {"source":"/editions/:date(\\d{4}-\\d{2}-\\d{2})", "destination":"/index.html"},
+    {"source":"/item/:id([a-z0-9-]+)", "destination":"/index.html"}
+  ],
+  "headers": [
+    {"source":"/(.*)", "headers":[
+      {"key":"X-Content-Type-Options","value":"nosniff"},
+      {"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"},
+      {"key":"X-Frame-Options","value":"DENY"},
+      {"key":"Content-Security-Policy","value":"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https:; font-src 'self'; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"}
+    ]},
+    {"source":"/feed-data/(.*)", "headers":[{"key":"Cache-Control","value":"public, max-age=0, must-revalidate"}]}
+  ]
+}

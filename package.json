@@ -1,0 +1,16 @@
+{
+  "name": "feed-purifier-web",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/public-build.mjs",
+    "build:public": "node scripts/public-build.mjs"
+  },
+  "dependencies": {
+    "esbuild": "0.25.12"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
