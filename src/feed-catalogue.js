@@ -1,7 +1,7 @@
 export const isConcept = item => item.format === 'Topic' || item.format === 'Primer';
 export const formatLabel = item => isConcept(item) ? 'Concept' : item.format;
 export const openLabel = item => item.format === 'Video' ? 'Watch' : item.format === 'Repository' ? 'View repository' : isConcept(item) ? 'Explore concept' : /Paper|Preprint/.test(item.format) ? 'Read paper' : 'Read';
-export const cardSummary = item => (item.why || '').match(/^.*?[.!?](?:\s|$)/)?.[0].trim() || item.why;
+export const cardSummary = item => (item.why || '').match(/^.*?[.!?](?:\s+(?=[A-Z“])|$)/)?.[0].trim() || item.why;
 
 export function publicDescription(value) {
   // Older editorial prompts sometimes mentioned private feedback in prose.
