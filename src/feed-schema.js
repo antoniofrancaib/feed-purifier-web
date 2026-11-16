@@ -21,6 +21,7 @@ export function validateEdition(e) {
     if (!safeURL(i.url) || typeof i.title !== 'string' || !i.title.trim() || typeof i.why !== 'string' || !i.why.trim() || typeof i.format !== 'string' || !Object.hasOwn(LANES, i.lane) || !SECTIONS.some(s => s.id === i.section)) fail(`invalid item ${i.id}`);
     if (!Number.isInteger(i.minutes) || i.minutes < 1 || i.minutes > 1440) fail(`invalid duration ${i.id}`);
     if (i.image && !safeURL(i.image)) fail('invalid image URL');
+    if (i.description !== undefined && (typeof i.description !== 'string' || !i.description.trim() || i.description.length > 280 || /[<>\n\r]/.test(i.description))) fail('invalid description');
     if (i.durationSeconds !== undefined && (!Number.isInteger(i.durationSeconds) || i.durationSeconds < 0)) fail('invalid media duration');
     if (i.audioSuitable !== undefined && typeof i.audioSuitable !== 'boolean') fail('invalid audio classification');
     if (i.videoCount !== undefined && (!Number.isInteger(i.videoCount) || i.videoCount < 1)) fail('invalid playlist count');

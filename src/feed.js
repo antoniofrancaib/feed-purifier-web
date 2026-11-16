@@ -1,6 +1,6 @@
 import { LANES, REASONS, safeURL, filterItems, readingTime } from './feed-schema.js';
 import { FeedbackSync } from './feed-sync.js';
-import { isConcept, formatLabel, openLabel, libraryItems, collectionItems } from './feed-catalogue.js';
+import { isConcept, formatLabel, openLabel, libraryItems, collectionItems, cardSummary } from './feed-catalogue.js';
 const PUBLIC = globalThis.FEED_PUBLIC === true;
 const OWNER_ORIGIN = 'https://antonio-learn.antoniofrancaib.workers.dev';
 
@@ -51,12 +51,12 @@ function duration(item) {
   return h ? `${h}:${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}` : `${m}:${String(sec).padStart(2,'0')}`;
 }
 const displayTime = item => item.format === 'Playlist' ? (item.videoCount ? `${item.videoCount} videos` : '') : ['Video','Audio'].includes(item.format) ? duration(item) : readingTime(item.minutes);
-function card(item) {
+function card(item, withDescription = false) {
   const isMedia = ['Video','Audio','Playlist'].includes(item.format);
   const stamp = duration(item);
   return `<article class="f-item f-card${isMedia ? ' f-video' : ''}${!isMedia && !isConcept(item) && !item.image ? ' f-text-card' : ''}${choice(item.id).read ? ' muted' : ''}" data-feed-item="${item.id}">
     <a class="f-card-image" href="${esc(safeURL(item.url))}" target="_blank" rel="noopener noreferrer" aria-label="${esc(openLabel(item) + ' ' + item.title)}">${media(item)}${stamp ? `<span class="f-duration">${stamp}</span>` : ''}</a>
-    <div class="f-card-body"><h2>${external(item.url,esc(item.title))}</h2><div class="f-card-source" title="${esc(item.by || item.source)}">${esc(item.by || item.source)}</div><div class="f-card-meta">${lane(item.lane)}<span>${esc(formatLabel(item))}</span>${item.published ? `<time datetime="${esc(item.published)}">${formatDate(item.published)}</time>` : ''}${link(itemURL(item),'Details','f-card-details')}</div>${actions(item)}</div></article>`;
+    <div class="f-card-body"><h2>${external(item.url,esc(item.title))}</h2>${withDescription ? `<p class="f-card-description">${esc(cardSummary(item))}</p>` : ''}<div class="f-card-source" title="${esc(item.by || item.source)}">${esc(item.by || item.source)}</div><div class="f-card-meta">${lane(item.lane)}<span>${esc(formatLabel(item))}</span>${item.published ? `<time datetime="${esc(item.published)}">${formatDate(item.published)}</time>` : ''}${link(itemURL(item),'Details','f-card-details')}</div>${actions(item)}</div></article>`;
 }
 const icons = {
  home:'<path d="m3 10 9-7 9 7v10H3Z"/><path d="M9 20v-7h6v7"/>',
@@ -160,7 +160,7 @@ export async function renderFeed(main, current = () => true) {
     let contents;
     if (page === '/library') contents = libraryView(items);
     else if (page === '/cut') contents = (edition.cut || []).map(c=>`<article class="f-cut"><h3>${external(c.url,esc(c.title))}</h3><p>${esc(c.reason)}</p></article>`).join('');
-    else contents = `<div class="f-card-grid${['/home','/news'].includes(page) ? ' f-reading-grid' : ''}">${filtered.map(card).join('')}</div>${!filtered.length ? '<div class="f-empty"><h2>No matches.</h2><p>Try another search or topic.</p></div>' : ''}`;
+    else contents = `<div class="f-card-grid${['/home','/news'].includes(page) ? ' f-reading-grid' : ''}">${filtered.map(item=>card(item,page === '/home')).join('')}</div>${!filtered.length ? '<div class="f-empty"><h2>No matches.</h2><p>Try another search or topic.</p></div>' : ''}`;
     const title = {'/home':'Home','/news':'News','/video':'Video','/audio':'Audio','/playlists':'Playlists','/library':'Library','/queue':'Saved for later','/canon':'Archive','/cut':'Editorial decisions'}[page] || 'Home';
     main.innerHTML = `<div class="f-browse"><div class="f-page-head"><h1 tabindex="-1">${archived ? formatDate(edition.date) : title}</h1>${page === '/library' ? link('/subjects/machine-learning','Learn archive ↗') : `<span>Updated ${formatDate(edition.date)}</span>`}</div>${page === '/cut' ? '' : filters(page === '/library' ? libraryItems(items,state,new URLSearchParams(location.search).get('view') || 'valuable') : items)}${contents}</div>`;
   }
