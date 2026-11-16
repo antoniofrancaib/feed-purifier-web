@@ -5,8 +5,6 @@
   "nextAt": "2026-11-20T05:00:00+01:00",
   "collections": {
     "home": [
-      "98eb98ead1dbf3103daf",
-      "b84dc37c7c9e97b6768e",
       "45902f284acb241763dd",
       "6da4c9d07bc7cc3b5103",
       "daa498c1d7560dcc5c14",
@@ -14,11 +12,9 @@
       "3d2e6d5a6361ab9ef433",
       "c68986dede738cf9c69b",
       "ebe0abd0cb0fb8f717c2",
-      "38e9043cb95327db7351",
       "5ebc0e22135116679311",
       "c818a1fb8f69bd97cd97",
       "12420702ad90f4a11cd8",
-      "d91596bb2d67dd13784f",
       "ea3deb60bcef65a479a9",
       "6b7c61116666ff550b44",
       "dcce611af67f2fa5b219",
@@ -26,13 +22,10 @@
       "e5473b76074ef1b77524",
       "9f97a2b7201d38457fb8",
       "6451370c6627e6f2f0f8",
-      "6400a3588632ce33e505",
       "49f1cbd13c985719e534",
-      "0b8175c3d7afa2a51e08",
       "617292881960b48ebe4f",
       "a1d3311fa92c73b314bf",
       "ea0425d2eb25058188df",
-      "2a4a2b6d7a497fc3c9e8",
       "3a0e8e62fbd2618983b1",
       "3c4bf50da60ddab691a4"
     ],
@@ -62,47 +55,65 @@
       "6400a3588632ce33e505"
     ],
     "video": [
+      "8031cd7d9733b1b52b53",
+      "9ca8b65ecaf6324ff2b1",
+      "a21dc6bae2863e7c8122",
+      "be8046fd5d5ee7b74230",
+      "487c555648f400338e1b",
+      "519e2785780316e9b706",
+      "a577d1e48a0ae0bb89b2",
+      "5dc4579d7d37d174e6e4",
       "a5fbb5d4246b99296aa5",
+      "e0dfc57b1031bede33e8",
+      "ca5f43b803d6374da471",
+      "649f70ff7049fd2e9af3",
+      "861754707cab30d99dfe",
+      "6b2f8c5e06ef94bf76d5",
+      "c22a3f01cfbc1b6417e0",
+      "3307da2f250fde01dff9",
       "23c9286c2dcfb650c5ae",
       "cd90466a45bc146d7c74",
       "084aaeeae2d2bf549b38",
-      "532ad8232ccd39ca4dc2",
-      "2fa2c5dc2379a92c4e83",
-      "be8046fd5d5ee7b74230",
-      "3307da2f250fde01dff9",
       "4b4f7d0e122e660c704f",
       "9a53aedbbc3114b0016e",
-      "ab0f869db3cb7f4c513e",
       "e6af5faad5c65781a78c",
       "d60acceca9f95594583c",
-      "17a14b3d590c857de09b",
       "6f2f4678cffb678ca2ed",
-      "e5bb2dbd56c41b9eef09",
       "12f00f9a89b123d86b9d",
       "d22e3340c339dccf80fd",
       "f8f175d07320ee5051e7",
       "1bcb887490ab46966f79",
       "24c609b53b4d0f2ea834",
-      "4c7da19a18ea7909149c",
-      "4a1433591c7cec3aed0a",
-      "54ebe8284c59061448aa",
-      "5e8de1a6f5db3d250c58",
-      "709367c9f914b30a756d",
-      "2e5b28f9b0c9b69bdb93",
-      "78b972f1e994ed3eaa08",
-      "d785c13bd2d6329e5a3d",
-      "6f8091d49620e2653350"
+      "7917f885194b41d8e7a2",
+      "599245a850e40f89e32c",
+      "649504a4d56920c7704b",
+      "63af8a0e214489d92205",
+      "d73baf927f268b12ac38",
+      "a58d686c066d26015742",
+      "20990a331a83580bbb4a"
     ],
     "audio": [
+      "c95c8fa334b229703a06",
+      "cc5836a8bd9c4fff1d81",
+      "acbca8cf70054783a6c0",
+      "38f9469a518a853c2db0",
+      "52a254efd515c80d0999",
+      "da5d8c50170d0b7f853f",
+      "1b75a7bd14ffc2a9278a",
       "b9ce4dffbaa0dc9e6bee",
       "c59df0b28125f3624125",
       "0551a2c6ccfe52199b49",
       "4c7da19a18ea7909149c",
+      "9c03de9c65eb2c051b3e",
+      "a4737489d5289ab1a8e0",
+      "191333a68aa31cb0f1d0",
+      "5fc3fe1f4e4ac8d20a9e",
+      "1bb652fc08bd83df9f4e",
+      "95a34fef67df38c7da65",
+      "7101efa9853f8ca93956",
       "9deca64e81fee2718fa0",
       "5f5cfc17479df2eaa34a",
-      "df796a2422b817b94ef7",
-      "1b1bff3677f49e962c6a",
-      "365697da35d25901b83f"
+      "df796a2422b817b94ef7"
     ],
     "playlists": [
       "a1cd0f9e56fdf740a97a",
@@ -116,44 +127,6 @@
     ]
   },
   "items": [
-    {
-      "id": "98eb98ead1dbf3103daf",
-      "url": "https://journals.plos.org/plosbiology/article?id=10.1371%2Fjournal.pbio.3004062",
-      "title": "Vertebrate paired fins are specified by an ancient dorso-ventral patterning system",
-      "lane": "bio",
-      "format": "Article",
-      "section": "fresh",
-      "minutes": 43,
-      "readingTimeBasis": "page",
-      "source": "journals.plos.org",
-      "by": "Rebecca E. Dale",
-      "published": "2026-11-10",
-      "why": "by Rebecca E. Dale, Silke Berger, Sara Alaei, Marcus C. Davis, Frank J. Tulenko, Peter D. Currie The origin of paired fins was a major event in early vertebrate history that fueled the adaptive radiation of the gnathostome clade. Evidence for the conservation of ancient regulatory systems between paired and median fins supports a model in which appendage-patterning mechanisms first evolved in the midline and were later redeployed to a new embryonic context, the flank. However, while paired fins and limbs are asymmetric along the dorsoventral (DV) axis, the equivalent axis does not exist in median fins, which are symmetric across the midline, raising questions of how DV patterning evolved. Here, we combine genetic tools in zebrafish with comparative expression analyses in representative ray-finned and cartilaginous fishes to show that a subset of limb DV patterning genes are expressed dur",
-      "description": "How paired fins acquired distinct upper and lower sides, studied through developmental gene activity in zebrafish and other fish.",
-      "image": "https://journals.plos.org/plosbiology/article/figure/image?id=10.1371%2Fjournal.pbio.3004062.strk&size=inline",
-      "evidenceBasis": "Publisher feed excerpt",
-      "audioSuitable": false,
-      "links": []
-    },
-    {
-      "id": "b84dc37c7c9e97b6768e",
-      "url": "https://www.embl.org/news/science-technology/understanding-the-rules-of-brain-cancer/",
-      "title": "Understanding the rules of brain cancer",
-      "lane": "x",
-      "format": "Article",
-      "section": "fresh",
-      "minutes": 7,
-      "readingTimeBasis": "page",
-      "source": "embl.org",
-      "by": "Shreya Ghosh",
-      "published": "2026-11-04",
-      "why": "Summary Glioblastoma kills over 100,000 people each year worldwide and is characterised by tumour cells that take on a range of cellular states. In two companion studies, researchers have shown that these cells follow predictable and repeatable paths between such states, and that this process is governed by distinct gene regulatory networks. The researchers were also able to systematically reprogram these states, pushing cells in a less malignant direction, increasing survival in mouse models. These new findings help us better understand how tumour cells evade treatment, and could identify molecular targets for more effective therapies in the future. Glioblastoma is the deadliest and most common type of malignant brain tumour in adults. One of the reasons it’s almost always incurable is that individual tumour cells are very different from one another and shift dynamically between various",
-      "description": "How glioblastoma cells move between cellular states, and how reprogramming those states reduced malignancy in mouse experiments.",
-      "image": "https://www.embl.org/news/wp-content/uploads/2026/11/FORWEB_Topographic_Brain.jpg",
-      "evidenceBasis": "Publisher feed excerpt",
-      "audioSuitable": false,
-      "links": []
-    },
     {
       "id": "45902f284acb241763dd",
       "url": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
@@ -283,25 +256,6 @@
       "links": []
     },
     {
-      "id": "38e9043cb95327db7351",
-      "url": "https://www.nature.com/articles/s41592-026-03291-8",
-      "title": "Tracing the genetic roots of cellular identity in tumors",
-      "lane": "x",
-      "format": "Article",
-      "section": "fresh",
-      "minutes": 15,
-      "readingTimeBasis": "estimate",
-      "source": "nature.com",
-      "by": "Nora M. Lawson",
-      "published": "2026-11-16",
-      "why": "Nature Methods, Published online: 16 November 2026; doi:10.1038/s41592-026-03291-8 A new Bayesian framework, Echidna, integrates bulk whole-genome sequencing with single-cell RNA sequencing to connect clonal copy-number states with transcriptional programs, providing a tractable way to ask how much of a tumor cell’s identity is encoded by its genome.",
-      "description": "How the Echidna framework combines bulk genome sequencing with single-cell RNA data to connect tumor genetics with cell identity.",
-      "image": "https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41592-026-03291-8/MediaObjects/41592_2026_3291_Fig1_HTML.png",
-      "evidenceBasis": "Publisher feed excerpt",
-      "audioSuitable": false,
-      "links": []
-    },
-    {
       "id": "5ebc0e22135116679311",
       "url": "https://elifesciences.org/articles/107563",
       "title": "The zoo of the gene networks capable of pattern formation by extracellular signaling",
@@ -351,25 +305,6 @@
       "published": "2026-09-22",
       "why": "Here’s an RNA-based therapeutic approach that’s well worth keeping an eye on, not least because it takes a different path than the ones that most of us have heard about. This transfer-RNA ( tRNA ) route would be directed at nonsense mutations that lead to human disease, and would be an alternative to gene therapy, or to the various “read-through” agents that have been attempted to try to transcribe past these premature-termination-codon (PTC) roadblocks. How does one do that? By provided “suppressor transfer RNAs” (sup-tRNAs), which is one of those ideas that is conceptually pretty straightforward but where the details have proven very hard to work through. For example, one way to get these things into a living organism is to use a viral vector (like AAV) to insert the sequences for them into the host’s genome, which is in effect just a variation on direct gene therapy. That comes with a",
       "description": "How suppressor transfer RNAs could help cells read past premature stop signals caused by disease-associated mutations, and the delivery challenges involved.",
-      "evidenceBasis": "Publisher feed excerpt",
-      "audioSuitable": false,
-      "links": []
-    },
-    {
-      "id": "d91596bb2d67dd13784f",
-      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1014899",
-      "title": "Handshake: Partner-specific protein-protein binding site prediction at scale using ProstT5 and cross-chain attention",
-      "lane": "x",
-      "format": "Article",
-      "section": "fresh",
-      "minutes": 39,
-      "readingTimeBasis": "page",
-      "source": "journals.plos.org",
-      "by": "Nurit Haspel",
-      "published": "2026-11-13",
-      "why": "by Nurit Haspel Partner-specific protein-protein binding site prediction, identifying which residues of a protein form the interface when bound to a specific partner, remains a challenging task with significant implications for drug discovery and understanding of protein structure and function. Existing computational methods are limited by small training datasets, inconsistent redundancy filtering, and reliance on three-dimensional structural information at test time. Here we present a sequence-only, partner-specific protein-protein interface predictor called HandShake. It combines ProstT5, a protein language model pre-trained on structural data, with Low-Rank Adaptation (LoRA), a cross-chain attention mechanism and a contact supervision head. Our method can detect both binding interfaces and pairwise contact matrices. We trained our model on very large datasets of non-redundant protein-",
-      "description": "A sequence-based method for predicting where two proteins bind, combining a protein language model with cross-chain attention.",
-      "image": "https://journals.plos.org/ploscompbiol/article/figure/image?id=10.1371%2Fjournal.pcbi.1014899.g003&size=inline",
       "evidenceBasis": "Publisher feed excerpt",
       "audioSuitable": false,
       "links": []
@@ -502,25 +437,6 @@
       "links": []
     },
     {
-      "id": "6400a3588632ce33e505",
-      "url": "https://www.nature.com/articles/s42256-026-01328-3",
-      "title": "Multimodal cell foundation models require synergistic integration beyond alignment",
-      "lane": "x",
-      "format": "Article",
-      "section": "fresh",
-      "minutes": 78,
-      "readingTimeBasis": "page",
-      "source": "nature.com",
-      "by": "Till Richter",
-      "published": "2026-11-09",
-      "why": "Nature Machine Intelligence, Published online: 09 November 2026; doi:10.1038/s42256-026-01328-3 Richter et al. show that simply aligning different types of biological data does not fully integrate them, revealing when data repeat the same information and, conversely, when they provide complementary insights.",
-      "description": "A study of when biological data types provide complementary information, and why aligning their representations alone may not integrate that information.",
-      "image": "https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs42256-026-01328-3/MediaObjects/42256_2026_1328_Fig1_HTML.png",
-      "evidenceBasis": "Publisher feed excerpt",
-      "audioSuitable": false,
-      "links": []
-    },
-    {
       "id": "49f1cbd13c985719e534",
       "url": "https://www.science.org/content/blog-post/not-glue-they-thought-it-was",
       "title": "Not The Glue They Thought It Was",
@@ -534,25 +450,6 @@
       "published": "2026-09-14",
       "why": "I’ve been meaning to write about this paper , which has an unusual variation on the “molecular glue” concept. It’s getting to the point where I’m going to have to stop putting that phrase in quotation marks because it’s become so familiar. But for those outside the field, a glue is a small molecule that (by itself) brings two proteins together that otherwise would not interact in such a way. There are indeed startlingly small molecules that form ternary complexes with two large protein partners, complexes that ot",
       "description": "A discussion of molecular glues: small molecules that bring two proteins together, and the challenges of explaining how they work.",
-      "evidenceBasis": "Publisher feed excerpt",
-      "audioSuitable": false,
-      "links": []
-    },
-    {
-      "id": "0b8175c3d7afa2a51e08",
-      "url": "https://journals.plos.org/plosbiology/article?id=10.1371%2Fjournal.pbio.3004089",
-      "title": "The importance of genes does not predict their mutation rate",
-      "lane": "bio",
-      "format": "Article",
-      "section": "fresh",
-      "minutes": 100,
-      "readingTimeBasis": "page",
-      "source": "journals.plos.org",
-      "by": "Sofia Radrizzani",
-      "published": "2026-11-12",
-      "why": "by Sofia Radrizzani, Laurence D. Hurst The convention that mutation is a random process has been challenged by suggestions that selection has acted on between-gene variation in the mutation rate, with claims that more important genes are protected from mutation in part, in prokaryotes, by being on the leading strand, while those required for rapid adaptive evolution have higher mutation rates, in part by being on the lagging strand. The original selectionist claims have proven contentious with several replication failures. However, none of the replication attempts fully allow for covariates and many employ data from mismatch repair (MMR) knockout strains. To address these limitations, we consider amassed mutation accumulation data for wild-type Escherichia coli , the focal species for adaptive claims, and Saccharomyces cerevisiae , in a multiple parameter-controlled analysis to predict b",
-      "description": "Tests whether gene importance predicts mutation rates after accounting for other factors in bacterial and yeast mutation data.",
-      "image": "https://journals.plos.org/plosbiology/article/figure/image?id=10.1371%2Fjournal.pbio.3004089.g006&size=inline",
       "evidenceBasis": "Publisher feed excerpt",
       "audioSuitable": false,
       "links": []
@@ -613,25 +510,6 @@
       "links": []
     },
     {
-      "id": "2a4a2b6d7a497fc3c9e8",
-      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1014910",
-      "title": "Decomposition of the S. aureus pangenome reveals evolving genetic repertoire associated with adaptation and virulence",
-      "lane": "x",
-      "format": "Article",
-      "section": "fresh",
-      "minutes": 38,
-      "readingTimeBasis": "page",
-      "source": "journals.plos.org",
-      "by": "Siddharth M. Chauhan",
-      "published": "2026-11-12",
-      "why": "by Siddharth M. Chauhan, Bernhard O. Palsson, Jonathan M. Monk Bacterial pangenomes are mosaics of vertically inherited chromosomal backgrounds and horizontally acquired mobile elements, yet existing analysis methods either assign each genome to a single phylogenetic group or treat genes independently, failing to resolve this composite architecture. Here, we show that non-negative matrix factorization decomposes the accessory pangenome of 1,398 curated Staphylococcus aureus genomes into 24 additive gene modules (“phylons”) that cleanly separate lineage-defining components from mobile genetic element repertoires, achieving 90% reconstruction accuracy with 96% precision. The additive representation, where each genome equals a primary lineage phylon plus one or more mobilome phylons, recovers known biology (clonal complex structure, immune evasion cluster types) and reveals previously uncha",
-      "description": "Uses non-negative matrix factorization to separate inherited lineages from mobile gene modules in the Staphylococcus aureus pangenome.",
-      "image": "https://journals.plos.org/ploscompbiol/article/figure/image?id=10.1371%2Fjournal.pcbi.1014910.g007&size=inline",
-      "evidenceBasis": "Publisher feed excerpt",
-      "audioSuitable": false,
-      "links": []
-    },
-    {
       "id": "3a0e8e62fbd2618983b1",
       "url": "https://thegradient.pub/shape-symmetry-structure/",
       "title": "Shape, Symmetries, and Structure: The Changing Role of Mathematics in Machine Learning Research",
@@ -665,6 +543,63 @@
       "why": "by Xiaodong Zeng, Jingwen Zhang, Shan Li, Haohua Wang Single-cell RNA sequencing (scRNA-seq) has established that gene expression is driven by stochastic transcriptional bursting. However, inferring burst dynamics from static scRNA-seq snapshots is fundamentally constrained by parameter unidentifiability and model topology mismatch. Here, we propose PhysInfer, an unsupervised framework that integrates a physics-constrained neural network with adaptive model selection and parameter decoupling. A physics-informed loss function, combining stationary-distribution likelihood with zero-count anchoring, reparameterizes the optimization from unidentifiable microscopic rates to an interpretable macroscopic burst-quantity representation of burst size and burst frequency, thereby providing an interpretable parameterization for assessing practical recoverability in static data. Validation on synthet",
       "description": "PhysInfer estimates gene-expression burst size and frequency from single-cell RNA data using a neural network constrained by a model of transcription.",
       "image": "https://journals.plos.org/ploscompbiol/article/figure/image?id=10.1371%2Fjournal.pcbi.1014904.g006&size=inline",
+      "evidenceBasis": "Publisher feed excerpt",
+      "audioSuitable": false,
+      "links": []
+    },
+    {
+      "id": "98eb98ead1dbf3103daf",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371%2Fjournal.pbio.3004062",
+      "title": "Vertebrate paired fins are specified by an ancient dorso-ventral patterning system",
+      "lane": "bio",
+      "format": "Article",
+      "section": "fresh",
+      "minutes": 43,
+      "readingTimeBasis": "page",
+      "source": "journals.plos.org",
+      "by": "Rebecca E. Dale",
+      "published": "2026-11-10",
+      "why": "by Rebecca E. Dale, Silke Berger, Sara Alaei, Marcus C. Davis, Frank J. Tulenko, Peter D. Currie The origin of paired fins was a major event in early vertebrate history that fueled the adaptive radiation of the gnathostome clade. Evidence for the conservation of ancient regulatory systems between paired and median fins supports a model in which appendage-patterning mechanisms first evolved in the midline and were later redeployed to a new embryonic context, the flank. However, while paired fins and limbs are asymmetric along the dorsoventral (DV) axis, the equivalent axis does not exist in median fins, which are symmetric across the midline, raising questions of how DV patterning evolved. Here, we combine genetic tools in zebrafish with comparative expression analyses in representative ray-finned and cartilaginous fishes to show that a subset of limb DV patterning genes are expressed dur",
+      "description": "How paired fins acquired distinct upper and lower sides, studied through developmental gene activity in zebrafish and other fish.",
+      "image": "https://journals.plos.org/plosbiology/article/figure/image?id=10.1371%2Fjournal.pbio.3004062.strk&size=inline",
+      "evidenceBasis": "Publisher feed excerpt",
+      "audioSuitable": false,
+      "links": []
+    },
+    {
+      "id": "b84dc37c7c9e97b6768e",
+      "url": "https://www.embl.org/news/science-technology/understanding-the-rules-of-brain-cancer/",
+      "title": "Understanding the rules of brain cancer",
+      "lane": "x",
+      "format": "Article",
+      "section": "fresh",
+      "minutes": 7,
+      "readingTimeBasis": "page",
+      "source": "embl.org",
+      "by": "Shreya Ghosh",
+      "published": "2026-11-04",
+      "why": "Summary Glioblastoma kills over 100,000 people each year worldwide and is characterised by tumour cells that take on a range of cellular states. In two companion studies, researchers have shown that these cells follow predictable and repeatable paths between such states, and that this process is governed by distinct gene regulatory networks. The researchers were also able to systematically reprogram these states, pushing cells in a less malignant direction, increasing survival in mouse models. These new findings help us better understand how tumour cells evade treatment, and could identify molecular targets for more effective therapies in the future. Glioblastoma is the deadliest and most common type of malignant brain tumour in adults. One of the reasons it’s almost always incurable is that individual tumour cells are very different from one another and shift dynamically between various",
+      "description": "How glioblastoma cells move between cellular states, and how reprogramming those states reduced malignancy in mouse experiments.",
+      "image": "https://www.embl.org/news/wp-content/uploads/2026/11/FORWEB_Topographic_Brain.jpg",
+      "evidenceBasis": "Publisher feed excerpt",
+      "audioSuitable": false,
+      "links": []
+    },
+    {
+      "id": "38e9043cb95327db7351",
+      "url": "https://www.nature.com/articles/s41592-026-03291-8",
+      "title": "Tracing the genetic roots of cellular identity in tumors",
+      "lane": "x",
+      "format": "Article",
+      "section": "fresh",
+      "minutes": 15,
+      "readingTimeBasis": "estimate",
+      "source": "nature.com",
+      "by": "Nora M. Lawson",
+      "published": "2026-11-16",
+      "why": "Nature Methods, Published online: 16 November 2026; doi:10.1038/s41592-026-03291-8 A new Bayesian framework, Echidna, integrates bulk whole-genome sequencing with single-cell RNA sequencing to connect clonal copy-number states with transcriptional programs, providing a tractable way to ask how much of a tumor cell’s identity is encoded by its genome.",
+      "description": "How the Echidna framework combines bulk genome sequencing with single-cell RNA data to connect tumor genetics with cell identity.",
+      "image": "https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41592-026-03291-8/MediaObjects/41592_2026_3291_Fig1_HTML.png",
       "evidenceBasis": "Publisher feed excerpt",
       "audioSuitable": false,
       "links": []
@@ -744,6 +679,25 @@
       "links": []
     },
     {
+      "id": "d91596bb2d67dd13784f",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1014899",
+      "title": "Handshake: Partner-specific protein-protein binding site prediction at scale using ProstT5 and cross-chain attention",
+      "lane": "x",
+      "format": "Article",
+      "section": "fresh",
+      "minutes": 39,
+      "readingTimeBasis": "page",
+      "source": "journals.plos.org",
+      "by": "Nurit Haspel",
+      "published": "2026-11-13",
+      "why": "by Nurit Haspel Partner-specific protein-protein binding site prediction, identifying which residues of a protein form the interface when bound to a specific partner, remains a challenging task with significant implications for drug discovery and understanding of protein structure and function. Existing computational methods are limited by small training datasets, inconsistent redundancy filtering, and reliance on three-dimensional structural information at test time. Here we present a sequence-only, partner-specific protein-protein interface predictor called HandShake. It combines ProstT5, a protein language model pre-trained on structural data, with Low-Rank Adaptation (LoRA), a cross-chain attention mechanism and a contact supervision head. Our method can detect both binding interfaces and pairwise contact matrices. We trained our model on very large datasets of non-redundant protein-",
+      "description": "A sequence-based method for predicting where two proteins bind, combining a protein language model with cross-chain attention.",
+      "image": "https://journals.plos.org/ploscompbiol/article/figure/image?id=10.1371%2Fjournal.pcbi.1014899.g003&size=inline",
+      "evidenceBasis": "Publisher feed excerpt",
+      "audioSuitable": false,
+      "links": []
+    },
+    {
       "id": "42954d0f51aa14d35e5b",
       "url": "https://www.nature.com/articles/s41592-026-03319-z",
       "title": "Joint single-cell capture of Cas9 edits and transcriptomes reveals on- and off-target effects on gene expression",
@@ -818,6 +772,25 @@
       "links": []
     },
     {
+      "id": "0b8175c3d7afa2a51e08",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371%2Fjournal.pbio.3004089",
+      "title": "The importance of genes does not predict their mutation rate",
+      "lane": "bio",
+      "format": "Article",
+      "section": "fresh",
+      "minutes": 100,
+      "readingTimeBasis": "page",
+      "source": "journals.plos.org",
+      "by": "Sofia Radrizzani",
+      "published": "2026-11-12",
+      "why": "by Sofia Radrizzani, Laurence D. Hurst The convention that mutation is a random process has been challenged by suggestions that selection has acted on between-gene variation in the mutation rate, with claims that more important genes are protected from mutation in part, in prokaryotes, by being on the leading strand, while those required for rapid adaptive evolution have higher mutation rates, in part by being on the lagging strand. The original selectionist claims have proven contentious with several replication failures. However, none of the replication attempts fully allow for covariates and many employ data from mismatch repair (MMR) knockout strains. To address these limitations, we consider amassed mutation accumulation data for wild-type Escherichia coli , the focal species for adaptive claims, and Saccharomyces cerevisiae , in a multiple parameter-controlled analysis to predict b",
+      "description": "Tests whether gene importance predicts mutation rates after accounting for other factors in bacterial and yeast mutation data.",
+      "image": "https://journals.plos.org/plosbiology/article/figure/image?id=10.1371%2Fjournal.pbio.3004089.g006&size=inline",
+      "evidenceBasis": "Publisher feed excerpt",
+      "audioSuitable": false,
+      "links": []
+    },
+    {
       "id": "2ff01016fd9571698bdf",
       "url": "https://www.nature.com/articles/s41593-026-02504-9",
       "title": "Enhancer-targeted CRISPR-A rescues haploinsufficiency and mutant phenotypes in organoid models of autism",
@@ -887,6 +860,25 @@
       "why": "Discovering new molecules for specific uses is a major driver of progress in a wide variety of industries, whether it’s pharmaceutical companies looking for new drugs, or electronics or energy companies seeking new materials with particular properties. But it’s also largely a trial-and-error process, because there is not yet any way to perfectly predict how a given chemical compound will behave in terms of the myriad different properties and responses materials can exhibit. Recent progress has been made on using artificial intelligence and machine learning to supplement or speed up laborious calculations based on physical principles that can at least provide some initial guidance on which compounds might be worth synthesizing and testing. Now, a new method developed at MIT shows that when there are few data on some technologically relevant property, such as ligand affinities for a recent",
       "description": "A machine-learning approach for predicting molecular properties when only a small amount of relevant experimental data is available.",
       "image": "https://news.mit.edu/sites/default/files/images/202610/mit-cheme-chemeleon.jpg",
+      "evidenceBasis": "Publisher feed excerpt",
+      "audioSuitable": false,
+      "links": []
+    },
+    {
+      "id": "2a4a2b6d7a497fc3c9e8",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1014910",
+      "title": "Decomposition of the S. aureus pangenome reveals evolving genetic repertoire associated with adaptation and virulence",
+      "lane": "x",
+      "format": "Article",
+      "section": "fresh",
+      "minutes": 38,
+      "readingTimeBasis": "page",
+      "source": "journals.plos.org",
+      "by": "Siddharth M. Chauhan",
+      "published": "2026-11-12",
+      "why": "by Siddharth M. Chauhan, Bernhard O. Palsson, Jonathan M. Monk Bacterial pangenomes are mosaics of vertically inherited chromosomal backgrounds and horizontally acquired mobile elements, yet existing analysis methods either assign each genome to a single phylogenetic group or treat genes independently, failing to resolve this composite architecture. Here, we show that non-negative matrix factorization decomposes the accessory pangenome of 1,398 curated Staphylococcus aureus genomes into 24 additive gene modules (“phylons”) that cleanly separate lineage-defining components from mobile genetic element repertoires, achieving 90% reconstruction accuracy with 96% precision. The additive representation, where each genome equals a primary lineage phylon plus one or more mobilome phylons, recovers known biology (clonal complex structure, immune evasion cluster types) and reveals previously uncha",
+      "description": "Uses non-negative matrix factorization to separate inherited lineages from mobile gene modules in the Staphylococcus aureus pangenome.",
+      "image": "https://journals.plos.org/ploscompbiol/article/figure/image?id=10.1371%2Fjournal.pcbi.1014910.g007&size=inline",
       "evidenceBasis": "Publisher feed excerpt",
       "audioSuitable": false,
       "links": []
@@ -967,6 +959,193 @@
       "links": []
     },
     {
+      "id": "6400a3588632ce33e505",
+      "url": "https://www.nature.com/articles/s42256-026-01328-3",
+      "title": "Multimodal cell foundation models require synergistic integration beyond alignment",
+      "lane": "x",
+      "format": "Article",
+      "section": "fresh",
+      "minutes": 78,
+      "readingTimeBasis": "page",
+      "source": "nature.com",
+      "by": "Till Richter",
+      "published": "2026-11-09",
+      "why": "Nature Machine Intelligence, Published online: 09 November 2026; doi:10.1038/s42256-026-01328-3 Richter et al. show that simply aligning different types of biological data does not fully integrate them, revealing when data repeat the same information and, conversely, when they provide complementary insights.",
+      "description": "A study of when biological data types provide complementary information, and why aligning their representations alone may not integrate that information.",
+      "image": "https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs42256-026-01328-3/MediaObjects/42256_2026_1328_Fig1_HTML.png",
+      "evidenceBasis": "Publisher feed excerpt",
+      "audioSuitable": false,
+      "links": []
+    },
+    {
+      "id": "8031cd7d9733b1b52b53",
+      "url": "https://www.youtube.com/watch?v=4XqexiQSx_Y",
+      "title": "Reinforcement Learning with GRPO, Clearly Explained!!!",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 27,
+      "source": "youtube.com",
+      "by": "StatQuest with Josh Starmer",
+      "published": "2026-11-16",
+      "why": "Josh Starmer walks through the GRPO loss function used to train language models with reinforcement learning.",
+      "image": "https://i1.ytimg.com/vi/4XqexiQSx_Y/hqdefault.jpg",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 1590,
+      "audioSuitable": false,
+      "links": []
+    },
+    {
+      "id": "9ca8b65ecaf6324ff2b1",
+      "url": "https://www.youtube.com/watch?v=KV37KIh2ZAk",
+      "title": "Chaos and Noise in Evolutionary Game Dynamics",
+      "lane": "x",
+      "format": "Video",
+      "section": "long",
+      "minutes": 36,
+      "source": "youtube.com",
+      "by": "Santa Fe Institute",
+      "published": "2026-08-11",
+      "why": "Alejandra Ramírez discusses deterministic chaos and stochastic models in evolutionary game dynamics.",
+      "image": "https://i4.ytimg.com/vi/KV37KIh2ZAk/hqdefault.jpg",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 2114,
+      "audioSuitable": false,
+      "links": []
+    },
+    {
+      "id": "a21dc6bae2863e7c8122",
+      "url": "https://www.youtube.com/watch?v=pHsuIaPbNbY",
+      "title": "Efficient Bayesian inference with Hamiltonian Monte Carlo -- Michael Betancourt (Part 1)",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 90,
+      "source": "youtube.com",
+      "by": "MLSS Iceland 2014",
+      "published": "2014-11-17",
+      "why": "Michael Betancourt introduces Hamiltonian Monte Carlo and the difficulty of sampling high-dimensional distributions.",
+      "image": "https://i.ytimg.com/vi/pHsuIaPbNbY/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 5383,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/pHsuIaPbNbY",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "be8046fd5d5ee7b74230",
+      "url": "https://www.youtube.com/watch?v=plVk4NVIUh8",
+      "title": "The Evolution of Bacteria on a “Mega-Plate” Petri Dish (Kishony Lab)",
+      "lane": "bio",
+      "format": "Video",
+      "section": "long",
+      "minutes": 2,
+      "source": "youtube.com",
+      "by": "Harvard Medical School",
+      "published": "2016-09-09",
+      "why": "A two-minute time-lapse from the Kishony Lab showing bacteria spreading across a giant petri dish with increasing antibiotic doses, evolving resistance as they go.",
+      "image": "https://i.ytimg.com/vi/plVk4NVIUh8/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 115,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/plVk4NVIUh8",
+          "label": "HackerTube"
+        },
+        {
+          "url": "https://hackertube.org/watch/plVk4NVIUh8",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "487c555648f400338e1b",
+      "url": "https://www.youtube.com/shorts/t8dnZDuMTRs",
+      "title": "Vision Transformers Need Registers.",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 2,
+      "source": "youtube.com",
+      "by": "Welch Labs",
+      "published": "2026-10-30",
+      "why": "An explanation of register tokens in vision transformers.",
+      "image": "https://i1.ytimg.com/vi/t8dnZDuMTRs/hqdefault.jpg",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 63,
+      "audioSuitable": false,
+      "links": []
+    },
+    {
+      "id": "519e2785780316e9b706",
+      "url": "https://www.youtube.com/watch?v=YzSAzPO-rv8",
+      "title": "Birds: The dinosaurs that forgot to die | with Steve Brusatte",
+      "lane": "bio",
+      "format": "Video",
+      "section": "long",
+      "minutes": 62,
+      "source": "youtube.com",
+      "by": "The Royal Institution",
+      "published": "2026-11-13",
+      "why": "Steve Brusatte traces the fossil evidence connecting living birds to dinosaurs.",
+      "image": "https://i2.ytimg.com/vi/YzSAzPO-rv8/hqdefault.jpg",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 3698,
+      "audioSuitable": false,
+      "links": []
+    },
+    {
+      "id": "a577d1e48a0ae0bb89b2",
+      "url": "https://www.youtube.com/watch?v=ne99laPUxN4",
+      "title": "The Simple Essence of Automatic Differentiation - Conal Elliott",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 91,
+      "source": "youtube.com",
+      "by": "Microsoft Research",
+      "published": "2018-07-26",
+      "why": "Conal Elliott derives automatic differentiation and relates forward and reverse modes through different representations of derivatives.",
+      "image": "https://i.ytimg.com/vi/ne99laPUxN4/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 5445,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/ne99laPUxN4",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "5dc4579d7d37d174e6e4",
+      "url": "https://www.youtube.com/watch?v=A-fxij3zM7g",
+      "title": "The Braitenberg Vehicles",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 16,
+      "source": "youtube.com",
+      "by": "Brian Douglas",
+      "published": "2015-11-16",
+      "why": "Brian Douglas shows how simple connections between sensors and motors produce surprisingly complex robot behaviour.",
+      "image": "https://i.ytimg.com/vi/A-fxij3zM7g/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 928,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/A-fxij3zM7g",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
       "id": "a5fbb5d4246b99296aa5",
       "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc",
       "title": "Attention in transformers, step-by-step | Deep Learning Chapter 6",
@@ -989,6 +1168,171 @@
         },
         {
           "url": "https://hackertube.org/watch/eMlx5fFNoYc",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "e0dfc57b1031bede33e8",
+      "url": "https://www.youtube.com/watch?v=LQmTKxI4Wn4",
+      "title": "Electron transport chain",
+      "lane": "bio",
+      "format": "Video",
+      "section": "long",
+      "minutes": 8,
+      "source": "youtube.com",
+      "by": "Harvard Online",
+      "published": "2017-10-09",
+      "why": "An animation of the mitochondrial electron transport chain, proton pumping and ATP synthesis.",
+      "image": "https://i.ytimg.com/vi/LQmTKxI4Wn4/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 465,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/LQmTKxI4Wn4",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "ca5f43b803d6374da471",
+      "url": "https://www.youtube.com/watch?v=hhiLw5Q_UFg",
+      "title": "John Schulman - Reinforcement Learning from Human Feedback: Progress and Challenges",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 64,
+      "source": "youtube.com",
+      "by": "UC Berkeley EECS",
+      "published": "2023-04-20",
+      "why": "John Schulman - Reinforcement Learning from Human Feedback: Progress and Challenges",
+      "image": "https://i.ytimg.com/vi/hhiLw5Q_UFg/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 3812,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/hhiLw5Q_UFg",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "649f70ff7049fd2e9af3",
+      "url": "https://www.youtube.com/watch?v=mbyG85GZ0PI",
+      "title": "Lecture 01 - The Learning Problem",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 82,
+      "source": "youtube.com",
+      "by": "caltech",
+      "published": "2012-08-28",
+      "why": "Yaser Abu-Mostafa introduces the learning problem in the opening lecture of Caltech’s Learning from Data course.",
+      "image": "https://i.ytimg.com/vi/mbyG85GZ0PI/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 4888,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/mbyG85GZ0PI",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "861754707cab30d99dfe",
+      "url": "https://www.youtube.com/watch?v=BCiZc0n6COY",
+      "title": "Lecture 1: Introduction to Information Theory",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 62,
+      "source": "youtube.com",
+      "by": "Jakob Foerster",
+      "published": "2014-04-26",
+      "why": "David MacKay introduces information theory, inference and learning in the first lecture of his Cambridge course.",
+      "image": "https://i.ytimg.com/vi/BCiZc0n6COY/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 3711,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/BCiZc0n6COY",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "6b2f8c5e06ef94bf76d5",
+      "url": "https://www.youtube.com/watch?v=Iq9DzN6mvYA",
+      "title": "Jake Vanderplas - Statistics for Hackers - PyCon 2016.mp4",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 41,
+      "source": "youtube.com",
+      "by": "PyCon 2016",
+      "published": "2016-06-17",
+      "why": "Jake Vanderplas uses simulation, shuffling and bootstrapping to explain statistical inference.",
+      "image": "https://i.ytimg.com/vi/Iq9DzN6mvYA/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 2445,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/Iq9DzN6mvYA",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "c22a3f01cfbc1b6417e0",
+      "url": "https://www.youtube.com/watch?v=NIu_dJGyIQI",
+      "title": "Free Energy Principle — Karl Friston",
+      "lane": "x",
+      "format": "Video",
+      "section": "long",
+      "minutes": 16,
+      "source": "youtube.com",
+      "by": "Serious Science",
+      "published": "2017-06-16",
+      "why": "Karl Friston introduces the free energy principle, Markov blankets and Bayesian model evidence.",
+      "image": "https://i.ytimg.com/vi/NIu_dJGyIQI/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 913,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/NIu_dJGyIQI",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "3307da2f250fde01dff9",
+      "url": "https://www.youtube.com/watch?v=PqPGOhXoprU",
+      "title": "Jack Szostak (Harvard/HHMI) Part 1: The Origin of Cellular Life on Earth",
+      "lane": "bio",
+      "format": "Video",
+      "section": "long",
+      "minutes": 55,
+      "source": "youtube.com",
+      "by": "Science Communication Lab",
+      "published": "2012-01-11",
+      "why": "Jack Szostak's lecture covers how cellular life could have arisen from chemistry on the early Earth, starting from the odds of life elsewhere in the galaxy. It is part of a series on protocells and the RNA world.",
+      "image": "https://i.ytimg.com/vi/PqPGOhXoprU/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 3281,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/PqPGOhXoprU",
+          "label": "HackerTube"
+        },
+        {
+          "url": "https://hackertube.org/watch/PqPGOhXoprU",
           "label": "HackerTube"
         }
       ]
@@ -1071,110 +1415,6 @@
       ]
     },
     {
-      "id": "532ad8232ccd39ca4dc2",
-      "url": "https://www.youtube.com/watch?v=OyFJWRnt_AY",
-      "title": "CS480/680 Lecture 19: Attention and Transformer Networks",
-      "lane": "ai",
-      "format": "Video",
-      "section": "long",
-      "minutes": 83,
-      "source": "youtube.com",
-      "by": "Pascal Poupart",
-      "published": "2019-07-16",
-      "why": "A university lecture from CS480/680 by Pascal Poupart on attention mechanisms and transformer networks, worked through on a chalkboard.",
-      "image": "https://i.ytimg.com/vi/OyFJWRnt_AY/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 4958,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/OyFJWRnt_AY",
-          "label": "HackerTube"
-        }
-      ]
-    },
-    {
-      "id": "2fa2c5dc2379a92c4e83",
-      "url": "https://www.youtube.com/watch?v=iDulhoQ2pro",
-      "title": "Attention Is All You Need",
-      "lane": "ai",
-      "format": "Video",
-      "section": "long",
-      "minutes": 28,
-      "source": "youtube.com",
-      "by": "Yannic Kilcher",
-      "published": "2017-11-28",
-      "why": "He reviews the architecture and the paper's translation results.",
-      "image": "https://i.ytimg.com/vi/iDulhoQ2pro/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 1627,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/iDulhoQ2pro",
-          "label": "HackerTube"
-        },
-        {
-          "url": "https://hackertube.org/watch/iDulhoQ2pro",
-          "label": "HackerTube"
-        }
-      ]
-    },
-    {
-      "id": "be8046fd5d5ee7b74230",
-      "url": "https://www.youtube.com/watch?v=plVk4NVIUh8",
-      "title": "The Evolution of Bacteria on a “Mega-Plate” Petri Dish (Kishony Lab)",
-      "lane": "bio",
-      "format": "Video",
-      "section": "long",
-      "minutes": 2,
-      "source": "youtube.com",
-      "by": "Harvard Medical School",
-      "published": "2016-09-09",
-      "why": "A two-minute time-lapse from the Kishony Lab showing bacteria spreading across a giant petri dish with increasing antibiotic doses, evolving resistance as they go.",
-      "image": "https://i.ytimg.com/vi/plVk4NVIUh8/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 115,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/plVk4NVIUh8",
-          "label": "HackerTube"
-        },
-        {
-          "url": "https://hackertube.org/watch/plVk4NVIUh8",
-          "label": "HackerTube"
-        }
-      ]
-    },
-    {
-      "id": "3307da2f250fde01dff9",
-      "url": "https://www.youtube.com/watch?v=PqPGOhXoprU",
-      "title": "Jack Szostak (Harvard/HHMI) Part 1: The Origin of Cellular Life on Earth",
-      "lane": "bio",
-      "format": "Video",
-      "section": "long",
-      "minutes": 55,
-      "source": "youtube.com",
-      "by": "Science Communication Lab",
-      "published": "2012-01-11",
-      "why": "Jack Szostak's lecture covers how cellular life could have arisen from chemistry on the early Earth, starting from the odds of life elsewhere in the galaxy. It is part of a series on protocells and the RNA world.",
-      "image": "https://i.ytimg.com/vi/PqPGOhXoprU/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 3281,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/PqPGOhXoprU",
-          "label": "HackerTube"
-        },
-        {
-          "url": "https://hackertube.org/watch/PqPGOhXoprU",
-          "label": "HackerTube"
-        }
-      ]
-    },
-    {
       "id": "4b4f7d0e122e660c704f",
       "url": "https://www.youtube.com/watch?v=Y0Oa4Lp5fLE",
       "title": "2. Behavioral Evolution",
@@ -1220,33 +1460,6 @@
       "links": [
         {
           "url": "https://hackertube.org/watch/wpOxbesRNBc",
-          "label": "HackerTube"
-        }
-      ]
-    },
-    {
-      "id": "ab0f869db3cb7f4c513e",
-      "url": "https://www.youtube.com/watch?v=Ed3ioGO7g10",
-      "title": "Matter to Mind:Bioelectricity, Body Intelligence, Future of Regenerative Medicine- Dr. Michael Levin",
-      "lane": "bio",
-      "format": "Video",
-      "section": "long",
-      "minutes": 78,
-      "source": "youtube.com",
-      "by": "Harvard Extension Student Psychological Club",
-      "published": "2023-05-18",
-      "why": "Developmental and synthetic biologist Michael Levin speaks at a Harvard Extension student event on bioelectricity, body intelligence and regenerative medicine. He discusses how cell electrical networks guide growth and form.",
-      "image": "https://i.ytimg.com/vi/Ed3ioGO7g10/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 4636,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/Ed3ioGO7g10",
-          "label": "HackerTube"
-        },
-        {
-          "url": "https://hackertube.org/watch/Ed3ioGO7g10",
           "label": "HackerTube"
         }
       ]
@@ -1302,33 +1515,6 @@
       ]
     },
     {
-      "id": "17a14b3d590c857de09b",
-      "url": "https://www.youtube.com/watch?v=S27pHKBEp30",
-      "title": "LSTM is dead. Long Live Transformers!",
-      "lane": "ai",
-      "format": "Video",
-      "section": "long",
-      "minutes": 29,
-      "source": "youtube.com",
-      "by": "Seattle Applied Deep Learning",
-      "published": "2019-12-03",
-      "why": "Leo Dirac explains how transformer models have replaced LSTMs in NLP. He gives background from bag of words through RNNs and LSTMs, then a technical deep dive into multi-headed self-attention and positional encoding, with sample code.",
-      "image": "https://i.ytimg.com/vi/S27pHKBEp30/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 1728,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/S27pHKBEp30",
-          "label": "HackerTube"
-        },
-        {
-          "url": "https://hackertube.org/watch/S27pHKBEp30",
-          "label": "HackerTube"
-        }
-      ]
-    },
-    {
       "id": "6f2f4678cffb678ca2ed",
       "url": "https://www.youtube.com/watch?v=rURRYI66E54",
       "title": "AI Language Models & Transformers - Computerphile",
@@ -1347,33 +1533,6 @@
       "links": [
         {
           "url": "https://hackertube.org/watch/rURRYI66E54",
-          "label": "HackerTube"
-        }
-      ]
-    },
-    {
-      "id": "e5bb2dbd56c41b9eef09",
-      "url": "https://www.youtube.com/watch?v=RjD1aLm4Thg",
-      "title": "What Bodies Think About: Bioelectric Computation Outside the Nervous System - NeurIPS 2018",
-      "lane": "bio",
-      "format": "Video",
-      "section": "long",
-      "minutes": 53,
-      "source": "youtube.com",
-      "by": "The Artificial Intelligence Channel",
-      "published": "2018-12-05",
-      "why": "Michael Levin's NeurIPS 2018 talk on bioelectric computation outside the nervous system, showing how cell electrical networks shape development and regeneration. It covers morphological information processing in living tissue.",
-      "image": "https://i.ytimg.com/vi/RjD1aLm4Thg/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 3127,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/RjD1aLm4Thg",
-          "label": "HackerTube"
-        },
-        {
-          "url": "https://hackertube.org/watch/RjD1aLm4Thg",
           "label": "HackerTube"
         }
       ]
@@ -1502,223 +1661,291 @@
       ]
     },
     {
-      "id": "4c7da19a18ea7909149c",
-      "url": "https://www.youtube.com/watch?v=Uj6skZIxPuI",
-      "title": "David Reich — How one small tribe conquered the world 70,000 years ago",
+      "id": "7917f885194b41d8e7a2",
+      "url": "https://www.youtube.com/watch?v=ez4DgdurRPg",
+      "title": "Dance p 3 Mar09",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 10,
+      "source": "youtube.com",
+      "by": "Geoff Cumming",
+      "published": "2009-03-03",
+      "why": "Geoff Cumming simulates repeated experiments to show how much p-values fluctuate with sampling.",
+      "image": "https://i.ytimg.com/vi/ez4DgdurRPg/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 576,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/ez4DgdurRPg",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "599245a850e40f89e32c",
+      "url": "https://www.youtube.com/watch?v=DFFVSvAr7Wc",
+      "title": "Geoffrey West on COMPLEXITY",
       "lane": "bio",
       "format": "Video",
       "section": "long",
-      "minutes": 118,
+      "minutes": 41,
       "source": "youtube.com",
-      "by": "Dwarkesh Patel",
-      "published": "2024-08-29",
-      "why": "Dwarkesh Patel interviews ancient-DNA geneticist David Reich about human prehistory, including the small group that left Africa around 70,000 years ago and the Yamnaya expansion.",
-      "image": "https://i.ytimg.com/vi/Uj6skZIxPuI/hqdefault.jpg",
+      "by": "FQxI",
+      "published": "2011-10-02",
+      "why": "Geoffrey West discusses scaling relationships in organisms, cities and companies.",
+      "image": "https://i.ytimg.com/vi/DFFVSvAr7Wc/hqdefault.jpg",
       "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 7024,
+      "durationSeconds": 2451,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/DFFVSvAr7Wc",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "649504a4d56920c7704b",
+      "url": "https://www.youtube.com/watch?v=42QuXLucH3Q",
+      "title": "Is Most Published Research Wrong?",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 13,
+      "source": "youtube.com",
+      "by": "Veritasium",
+      "published": "2016-08-11",
+      "why": "An explanation of p-hacking, publication bias, replication and proposed reforms in scientific research.",
+      "image": "https://i.ytimg.com/vi/42QuXLucH3Q/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 742,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/42QuXLucH3Q",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "63af8a0e214489d92205",
+      "url": "https://www.youtube.com/watch?v=Qi1Yry33TQE",
+      "title": "Ali Rahimi's talk at NIPS(NIPS 2017 Test-of-time award presentation)",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 24,
+      "source": "youtube.com",
+      "by": "ObservantVids",
+      "published": "2017-12-06",
+      "why": "Ali Rahimi’s NIPS 2017 talk argues for stronger empirical and theoretical foundations in machine learning.",
+      "image": "https://i.ytimg.com/vi/Qi1Yry33TQE/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 1400,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/Qi1Yry33TQE",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "d73baf927f268b12ac38",
+      "url": "https://www.youtube.com/watch?v=JBgG_VSP7f8",
+      "title": "Karl Sims - Evolved Virtual Creatures, Evolution Simulation, 1994",
+      "lane": "x",
+      "format": "Video",
+      "section": "long",
+      "minutes": 5,
+      "source": "youtube.com",
+      "by": "MediaArtTube",
+      "published": "2008-12-06",
+      "why": "Karl Sims demonstrates simulated creatures whose bodies and controllers evolve through selection, mutation and recombination.",
+      "image": "https://i.ytimg.com/vi/JBgG_VSP7f8/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 250,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/JBgG_VSP7f8",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "a58d686c066d26015742",
+      "url": "https://www.youtube.com/watch?v=CaCcOwJPytQ",
+      "title": "Special Topics - The Kalman Filter (1 of 55) What is a Kalman Filter?",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 6,
+      "source": "youtube.com",
+      "by": "Michel van Biezen",
+      "published": "2015-09-12",
+      "why": "A short introduction to the purpose of a Kalman filter, opening a series of worked examples.",
+      "image": "https://i.ytimg.com/vi/CaCcOwJPytQ/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 356,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/CaCcOwJPytQ",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "20990a331a83580bbb4a",
+      "url": "https://www.youtube.com/watch?v=2pWv7GOvuf0",
+      "title": "RL Course by David Silver - Lecture 1: Introduction to Reinforcement Learning",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 89,
+      "source": "youtube.com",
+      "by": "Google DeepMind",
+      "published": "2015-05-13",
+      "why": "David Silver introduces reinforcement learning, agents, rewards and decision-making in his first course lecture.",
+      "image": "https://i.ytimg.com/vi/2pWv7GOvuf0/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 5293,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/2pWv7GOvuf0",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "c95c8fa334b229703a06",
+      "url": "https://latent.space/p/controlling-biology-fabian-theis-helmholtz-munich/",
+      "title": "Controlling Biology - Fabian Theis, Helmholtz Munich",
+      "lane": "x",
+      "format": "Audio",
+      "section": "long",
+      "minutes": 51,
+      "source": "latent.space",
+      "by": "Latent Space",
+      "published": "2026-11-06",
+      "why": "Fabian Theis discusses virtual cells and models for multimodal, time-varying biological data.",
+      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80,width=384/uploads/asset/file/d4933544-aa8c-47f8-a092-ec3775a7abd9/podcast_artwork_20261021-241-xyrobd.jpg?t=1792609818",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 3050,
       "audioSuitable": true,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/Uj6skZIxPuI",
-          "label": "HackerTube"
-        }
-      ]
+      "links": []
     },
     {
-      "id": "4a1433591c7cec3aed0a",
-      "url": "https://www.youtube.com/watch?v=bZQun8Y4L2A",
-      "title": "State of GPT | BRK216HFS",
+      "id": "cc5836a8bd9c4fff1d81",
+      "url": "https://learnbayesstats.com/episode/amortized-bayesian-inference-gpu-computing-stan-stancon-paul-burkner-steve-bronder",
+      "title": "#167 Amortized Inference & GPUs for Stan, with Paul-Christian Bürkner & Steve Bronder",
       "lane": "ai",
-      "format": "Video",
+      "format": "Audio",
       "section": "long",
-      "minutes": 43,
-      "source": "youtube.com",
-      "by": "Microsoft Developer",
-      "published": "2023-05-25",
-      "why": "Andrej Karpathy walks through how GPT assistants are trained, from tokenization and pretraining to supervised finetuning and RLHF, and gives practical prompting strategies and a view of the tooling ecosystem.",
-      "image": "https://i.ytimg.com/vi/bZQun8Y4L2A/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 2560,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/bZQun8Y4L2A",
-          "label": "HackerTube"
-        },
-        {
-          "url": "https://hackertube.org/watch/bZQun8Y4L2A",
-          "label": "HackerTube"
-        }
-      ]
+      "minutes": 64,
+      "source": "learnbayesstats.com",
+      "by": "Learning Bayesian Statistics",
+      "published": "2026-10-20",
+      "why": "Paul-Christian Bürkner and Steve Bronder discuss amortized Bayesian inference and GPU computation for Stan.",
+      "image": "https://hosting-media.riverside.com/media/podcasts/79e0a4fb-97ab-4e95-a875-24a8b9ee27da/episodes/41562838-a3c4-4add-86e1-e00d6fbea2d0/images/d5180fe1-fe9a-4c20-8267-9f49821aefde.png",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 3799,
+      "audioSuitable": true,
+      "links": []
     },
     {
-      "id": "54ebe8284c59061448aa",
-      "url": "https://www.youtube.com/watch?v=lG4VkPoG3ko",
-      "title": "The medical test paradox, and redesigning Bayes' rule",
-      "lane": "ai",
-      "format": "Video",
-      "section": "long",
-      "minutes": 22,
-      "source": "youtube.com",
-      "by": "3Blue1Brown",
-      "published": "2020-12-22",
-      "why": "3Blue1Brown explains why positive results on accurate medical tests are often false positives, and reframes Bayes' rule using likelihood ratios (Bayes factors) to update odds. It uses visual examples to make the reasoning intuitive.",
-      "image": "https://i.ytimg.com/vi/lG4VkPoG3ko/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 1274,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/lG4VkPoG3ko",
-          "label": "HackerTube"
-        }
-      ]
-    },
-    {
-      "id": "5e8de1a6f5db3d250c58",
-      "url": "https://www.youtube.com/watch?v=7xTGNNLPyMI",
-      "title": "Deep Dive into LLMs like ChatGPT",
-      "lane": "ai",
-      "format": "Video",
-      "section": "long",
-      "minutes": 212,
-      "source": "youtube.com",
-      "by": "Andrej Karpathy",
-      "published": "2025-02-05",
-      "why": "Andrej Karpathy's three-hour-plus general-audience deep dive into how ChatGPT-style LLMs are built, covering the full training stack from pretraining to post-training. It also gives mental models for their quirks, like hallucination, and how to use them well.",
-      "image": "https://i.ytimg.com/vi/7xTGNNLPyMI/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 12684,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/7xTGNNLPyMI",
-          "label": "HackerTube"
-        },
-        {
-          "url": "https://hackertube.org/watch/7xTGNNLPyMI",
-          "label": "HackerTube"
-        }
-      ]
-    },
-    {
-      "id": "709367c9f914b30a756d",
-      "url": "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      "title": "1. Introduction to Human Behavioral Biology",
+      "id": "acbca8cf70054783a6c0",
+      "url": "https://play.prx.org/listen?ge=prx_5340_5319f71a-fd84-4008-b29b-32dedadc0d70&uf=http%3A%2F%2Fjoy.quantamagazine.org",
+      "title": "How Do Fungi Keep the Planet Healthy?",
       "lane": "bio",
-      "format": "Video",
-      "section": "long",
-      "minutes": 58,
-      "source": "youtube.com",
-      "by": "Stanford",
-      "published": "2011-02-01",
-      "why": "The opening lecture of Robert Sapolsky's Stanford course on Human Behavioral Biology, explaining the course premise and how to avoid categorical thinking. It starts a roughly 25-lecture series on how biology, genes, hormones and environment shape behavior.",
-      "image": "https://i.ytimg.com/vi/NNnIGh9g6fA/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 3435,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/NNnIGh9g6fA",
-          "label": "HackerTube"
-        }
-      ]
-    },
-    {
-      "id": "2e5b28f9b0c9b69bdb93",
-      "url": "https://www.youtube.com/watch?v=1-dUkyn_fZA",
-      "title": "Emacs + org-mode + python in reproducible research; SciPy 2013 Presentation",
-      "lane": "ai",
-      "format": "Video",
-      "section": "long",
-      "minutes": 22,
-      "source": "youtube.com",
-      "by": "Enthought",
-      "published": "2013-07-02",
-      "why": "John Kitchin shows how Emacs org-mode with Python lets researchers combine narrative, math, figures and executable code in one document. It exports to LaTeX, HTML and PDF, and he used it for papers and e-books.",
-      "image": "https://i.ytimg.com/vi/1-dUkyn_fZA/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 1276,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/1-dUkyn_fZA",
-          "label": "HackerTube"
-        }
-      ]
-    },
-    {
-      "id": "78b972f1e994ed3eaa08",
-      "url": "https://www.youtube.com/watch?v=7jiPeIFXb6U",
-      "title": "I don't like notebooks.- Joel Grus (Allen Institute for Artificial Intelligence)",
-      "lane": "ai",
-      "format": "Video",
+      "format": "Audio",
       "section": "long",
       "minutes": 57,
-      "source": "youtube.com",
-      "by": "O'Reilly",
-      "published": "2018-10-10",
-      "why": "Joel Grus's JupyterCon talk explaining why he dislikes Jupyter notebooks. He covers hidden state, trouble with reproducibility and testing, and how notebooks frustrate teaching. He shows his preferred workflow and what Jupyter could change.",
-      "image": "https://i.ytimg.com/vi/7jiPeIFXb6U/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 3373,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/7jiPeIFXb6U",
-          "label": "HackerTube"
-        }
-      ]
+      "source": "play.prx.org",
+      "by": "The Joy of Why · Quanta",
+      "published": "2026-10-15",
+      "why": "A conversation about mycorrhizal fungi, their partnerships with plants and their role in soil ecosystems.",
+      "image": "https://f.prxu.org/5340/5319f71a-fd84-4008-b29b-32dedadc0d70/images/8fcc62dd-0ca8-416a-8d23-fb7540c03fef/JOW-S5-E10-cr-Chanelle-Nibbelink-Square-3000.jpg",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 3411,
+      "audioSuitable": true,
+      "links": []
     },
     {
-      "id": "d785c13bd2d6329e5a3d",
-      "url": "https://www.youtube.com/watch?v=r6sGWTCMz2k",
-      "title": "But what is a Fourier series? From heat flow to drawing with circles | DE4",
-      "lane": "ai",
-      "format": "Video",
+      "id": "38f9469a518a853c2db0",
+      "url": "https://complexity.simplecast.com/episodes/nature-of-intelligence-ep-5-how-do-we-assess-intelligence-pZMdVtVG",
+      "title": "Nature of Intelligence, Ep. 5: How do we assess intelligence?",
+      "lane": "x",
+      "format": "Audio",
       "section": "long",
-      "minutes": 25,
-      "source": "youtube.com",
-      "by": "3Blue1Brown",
-      "published": "2019-06-30",
-      "why": "3Blue1Brown introduces Fourier series, from the heat equation to drawing arbitrary shapes with rotating circles. It builds a visual intuition for decomposing functions into sine waves.",
-      "image": "https://i.ytimg.com/vi/r6sGWTCMz2k/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 1487,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/r6sGWTCMz2k",
-          "label": "HackerTube"
-        }
-      ]
+      "minutes": 49,
+      "source": "complexity.simplecast.com",
+      "by": "COMPLEXITY · Santa Fe Institute",
+      "published": "2024-11-20",
+      "why": "Erica Cartmill and Ellie Pavlick discuss how intelligence is assessed across humans, animals and machines.",
+      "image": "https://image.simplecastcdn.com/images/d79bf6d9-c873-44b7-9280-c30fa5bd4b99/22aa45a6-e71d-45b9-a4f9-b51e0640b1bb/3000x3000/sfi-complexiate-podcast-cover-still-20-2.jpg?aid=rss_feed",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 2892,
+      "audioSuitable": true,
+      "links": []
     },
     {
-      "id": "6f8091d49620e2653350",
-      "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g",
-      "title": "[1hr Talk] Intro to Large Language Models",
+      "id": "52a254efd515c80d0999",
+      "url": "https://podcasters.spotify.com/pod/show/machinelearningstreettalk/episodes/Who-Checks-a-Proof-No-Human-Can-Read---Leo-de-Moura-e3pjhg5",
+      "title": "Who Checks a Proof No Human Can Read? — Leo de Moura",
       "lane": "ai",
-      "format": "Video",
+      "format": "Audio",
       "section": "long",
-      "minutes": 60,
-      "source": "youtube.com",
-      "by": "Andrej Karpathy",
-      "published": "2023-11-23",
-      "why": "Andrej Karpathy gives a one-hour general-audience introduction to large language models, covering what they are, how they are trained, comparisons to operating systems, and security challenges such as jailbreaks.",
-      "image": "https://i.ytimg.com/vi/zjkBMFhNj_g/hqdefault.jpg",
-      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
-      "durationSeconds": 3588,
-      "audioSuitable": false,
-      "links": [
-        {
-          "url": "https://hackertube.org/watch/zjkBMFhNj_g",
-          "label": "HackerTube"
-        },
-        {
-          "url": "https://hackertube.org/watch/zjkBMFhNj_g",
-          "label": "HackerTube"
-        }
-      ]
+      "minutes": 75,
+      "source": "podcasters.spotify.com",
+      "by": "Machine Learning Street Talk",
+      "published": "2026-09-30",
+      "why": "Lean creator Leonardo de Moura discusses computer-checked proofs and the verification of AI-generated mathematics.",
+      "image": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/4981699/4981699-1790738340041-2f3b2201adc05.jpg",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 4459,
+      "audioSuitable": true,
+      "links": []
+    },
+    {
+      "id": "da5d8c50170d0b7f853f",
+      "url": "https://www.science.org/doi/10.1126/science.z9vz811",
+      "title": "Why an early Alzheimer’s theory is making a comeback, the U.S.’s electricity crisis, and improving precision medicine",
+      "lane": "bio",
+      "format": "Audio",
+      "section": "long",
+      "minutes": 51,
+      "source": "science.org",
+      "by": "Science Magazine Podcast",
+      "published": "2026-11-12",
+      "why": "Science reporters discuss renewed interest in a cholinergic hypothesis of Alzheimer’s disease, electricity transmission and precision medicine.",
+      "image": "https://megaphone.imgix.net/podcasts/41fc9f54-de10-11f1-8ceb-57267be8fb74/image/21cef599b8736851dda8e87eb825626e.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 3041,
+      "audioSuitable": true,
+      "links": []
+    },
+    {
+      "id": "1b75a7bd14ffc2a9278a",
+      "url": "https://shows.acast.com/nature/episodes/ancient-dna-reveals-how-european-languages-spread",
+      "title": "Ancient DNA charts spread of Celtic and Germanic languages",
+      "lane": "bio",
+      "format": "Audio",
+      "section": "long",
+      "minutes": 26,
+      "source": "shows.acast.com",
+      "by": "Nature Podcast",
+      "published": "2026-11-04",
+      "why": "Nature reports on ancient genomes and migrations associated with the spread of Celtic and Germanic languages.",
+      "image": "https://assets.pippa.io/shows/61b9f3b71a8cbe675f3cedcb/1768403592746-2c5f9e78-ae15-499a-9d0a-ae6ca82bb9ca.jpeg",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 1516,
+      "audioSuitable": true,
+      "links": []
     },
     {
       "id": "b9ce4dffbaa0dc9e6bee",
@@ -1729,7 +1956,7 @@
       "section": "long",
       "minutes": 108,
       "source": "braininspired.co",
-      "by": "Paul Middlebrooks",
+      "by": "Brain Inspired",
       "published": "2026-10-07",
       "why": "Support the show to get full episodes, full archive, and join the Discord community . The Transmitter is an online publication that aims to deliver useful information, insights and tools to build bridges across neuroscience and advance research. Visit thetransmitter.org to explore the latest neuroscience news and perspectives, written by journalists and scientists. Read more about our partnership . Sign up for Brain Inspired email alerts to be notified every time a new Brain Inspired episode is released. To explore more neuroscience news and perspectives, visit thetransmitter.org . Maxim Raginsky is a professor at the University of Illinois at Urbana-Champaign. Max describes himself as interested in probability and stochastic processes, deterministic and stochastic control, machine learning, optimization, and information theory. Today we mostly lean on his control theory expertise, altho",
       "image": "https://braininspired.co/wp-content/uploads/2026/10/ytArtboard-4-copy.jpg",
@@ -1747,7 +1974,7 @@
       "section": "long",
       "minutes": 15,
       "source": "microbe.tv",
-      "by": "profvrr",
+      "by": "This Week in Virology",
       "published": "2026-11-15",
       "why": "TWiV explains how bacteriophages in meromictic lakes may control metabolic activities in sulfur-cycling bacteria, and the requirement for more than one virus particle to infect a cell to suppress innate immune sensors. Hosts: Vincent Racaniello , Brianne Barker , and Jolene Ramsey Click arrow to play Download TWiV 1375 (65 MB .mp3, 109 min) Subscribe (free): Apple Podcasts , RSS , email Become a patron of TWiV! Links for this episode Support science education at MicrobeTV 4:09 Bundibugyo mRNA vaccine to phase 2/3 (Moderna) 8:45 Phage infections in meromictic lakes (ISME J) 12:44 Purple sulfur bacteria video (Silveira lab) 21:30 Supra-unitary virus infection to suppress innate sensors (Cell) 51:06 Timestamps by Jolene Ramsey. Thanks! Picks of the Week 1:35:23 Brianne – The U.S. Has Lost Its Measles-Elimination Status, Data Suggests Jolene – Gathering Moss: A natural and cultural history o",
       "evidenceBasis": "Publisher feed excerpt",
@@ -1773,6 +2000,158 @@
       "links": []
     },
     {
+      "id": "4c7da19a18ea7909149c",
+      "url": "https://www.youtube.com/watch?v=Uj6skZIxPuI",
+      "title": "David Reich — How one small tribe conquered the world 70,000 years ago",
+      "lane": "bio",
+      "format": "Video",
+      "section": "long",
+      "minutes": 118,
+      "source": "youtube.com",
+      "by": "Dwarkesh Podcast",
+      "published": "2024-08-29",
+      "why": "Dwarkesh Patel interviews ancient-DNA geneticist David Reich about human prehistory, including the small group that left Africa around 70,000 years ago and the Yamnaya expansion.",
+      "image": "https://i.ytimg.com/vi/Uj6skZIxPuI/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 7024,
+      "audioSuitable": true,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/Uj6skZIxPuI",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "9c03de9c65eb2c051b3e",
+      "url": "https://www.youtube.com/watch?v=F3Jd9GI6XqE",
+      "title": "Edward Gibson: Human Language, Psycholinguistics, Syntax, Grammar & LLMs | Lex Fridman Podcast #426",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 171,
+      "source": "youtube.com",
+      "by": "Lex Fridman Podcast",
+      "published": "2024-04-17",
+      "why": "Edward Gibson discusses human language, syntax, psycholinguistics and language models with Lex Fridman.",
+      "image": "https://i.ytimg.com/vi/F3Jd9GI6XqE/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 10245,
+      "audioSuitable": true,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/F3Jd9GI6XqE",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "a4737489d5289ab1a8e0",
+      "url": "https://learnbayesstats.com/episode/bayesian-workflow-reverse-bayes-hierarchical-pooling-gelman-vehtari-mcelreath",
+      "title": "#164 Bayesian Workflow, with Andrew Gelman, Aki Vehtari & Richard McElreath",
+      "lane": "ai",
+      "format": "Audio",
+      "section": "long",
+      "minutes": 105,
+      "source": "learnbayesstats.com",
+      "by": "Learning Bayesian Statistics",
+      "published": "2026-08-31",
+      "why": "Andrew Gelman, Aki Vehtari and Richard McElreath discuss practical Bayesian workflow and model building.",
+      "image": "https://hosting-media.riverside.com/media/podcasts/79e0a4fb-97ab-4e95-a875-24a8b9ee27da/episodes/7eecfc89-d180-4643-b309-925eaed4c575/images/993296ab-5ffa-46f7-b404-13226244ef1c.png",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 6253,
+      "audioSuitable": true,
+      "links": []
+    },
+    {
+      "id": "191333a68aa31cb0f1d0",
+      "url": "https://play.prx.org/listen?ge=prx_5340_597367a5-3f6c-4c48-9c50-4755c4e1540f&uf=http%3A%2F%2Fjoy.quantamagazine.org",
+      "title": "Can Network Science Transform Health and Nutrition?",
+      "lane": "x",
+      "format": "Audio",
+      "section": "long",
+      "minutes": 52,
+      "source": "play.prx.org",
+      "by": "The Joy of Why · Quanta",
+      "published": "2026-11-12",
+      "why": "A discussion of network structure and its applications to biological systems, health and nutrition.",
+      "image": "https://f.prxu.org/5340/597367a5-3f6c-4c48-9c50-4755c4e1540f/images/396ca15a-f48b-42ec-a68c-db179cb3ca6d/JOW-S5-E12-cr.Chanelle-Nibbelink-Square-PRX.jpg",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 3064,
+      "audioSuitable": true,
+      "links": []
+    },
+    {
+      "id": "5fc3fe1f4e4ac8d20a9e",
+      "url": "https://complexity.simplecast.com/episodes/nature-of-intelligence-ep-4-babies-vs-machines-2uCZnruE",
+      "title": "Nature of Intelligence, Ep. 4: Babies vs Machines",
+      "lane": "x",
+      "format": "Audio",
+      "section": "long",
+      "minutes": 39,
+      "source": "complexity.simplecast.com",
+      "by": "COMPLEXITY · Santa Fe Institute",
+      "published": "2024-11-06",
+      "why": "Linda Smith and Michael Frank discuss infant learning and its relationship to machine intelligence.",
+      "image": "https://image.simplecastcdn.com/images/d79bf6d9-c873-44b7-9280-c30fa5bd4b99/74cb785d-f643-4124-96f0-6a0f4b26ac61/3000x3000/sfi-complexiate-podcast-cover-still-20-2.jpg?aid=rss_feed",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 2317,
+      "audioSuitable": true,
+      "links": []
+    },
+    {
+      "id": "1bb652fc08bd83df9f4e",
+      "url": "https://podcasters.spotify.com/pod/show/machinelearningstreettalk/episodes/What-Most-People-Get-Wrong-About-Evolution--Akarsh-Kumar-e3q8ds7",
+      "title": "What Most People Get Wrong About Evolution | Akarsh Kumar",
+      "lane": "ai",
+      "format": "Audio",
+      "section": "long",
+      "minutes": 48,
+      "source": "podcasters.spotify.com",
+      "by": "Machine Learning Street Talk",
+      "published": "2026-10-10",
+      "why": "Akarsh Kumar discusses evolutionary search, partial solutions and why selection is more than random trial and error.",
+      "image": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/4981699/4981699-1791611193615-5ef182c8cdfd5.jpg",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 2874,
+      "audioSuitable": true,
+      "links": []
+    },
+    {
+      "id": "95a34fef67df38c7da65",
+      "url": "https://www.nature.com/articles/d41586-026-03671-2",
+      "title": "Too dry for cacti: extreme droughts could push iconic species to extinction",
+      "lane": "bio",
+      "format": "Audio",
+      "section": "long",
+      "minutes": 25,
+      "source": "nature.com",
+      "by": "Nature Podcast",
+      "published": "2026-11-11",
+      "why": "Nature reports on extreme drought and cactus populations, alongside other recent research.",
+      "image": "https://assets.pippa.io/shows/61b9f3b71a8cbe675f3cedcb/1768403592746-2c5f9e78-ae15-499a-9d0a-ae6ca82bb9ca.jpeg",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "durationSeconds": 1469,
+      "audioSuitable": true,
+      "links": []
+    },
+    {
+      "id": "7101efa9853f8ca93956",
+      "url": "https://www.dwarkesh.com/p/john-beren-charlie",
+      "title": "AI researchers debate how close we are to recursive self-improvement",
+      "lane": "ai",
+      "format": "Audio",
+      "section": "long",
+      "minutes": 15,
+      "source": "dwarkesh.com",
+      "by": "Dwarkesh Podcast",
+      "published": "2026-09-11",
+      "why": "John Schulman, Beren Millidge and Charlie O’Neill discuss current AI research and the prospects for recursive self-improvement.",
+      "evidenceBasis": "Publisher media metadata; transcript not reviewed",
+      "audioSuitable": true,
+      "links": []
+    },
+    {
       "id": "9deca64e81fee2718fa0",
       "url": "https://braininspired.co/podcast/245/",
       "title": "BI 245 Dan Levenstein: Neuro-AI, Dynamics, and Model Systems",
@@ -1781,7 +2160,7 @@
       "section": "long",
       "minutes": 97,
       "source": "braininspired.co",
-      "by": "Paul Middlebrooks",
+      "by": "Brain Inspired",
       "published": "2026-09-02",
       "why": "Support the show to get full episodes, full archive, and join the Discord community . The Transmitter is an online publication that aims to deliver useful information, insights and tools to build bridges across neuroscience and advance research. Visit thetransmitter.org to explore the latest neuroscience news and perspectives, written by journalists and scientists. Read more about our partnership . Sign up for Brain Inspired email alerts to be notified every time a new Brain Inspired episode is released. To explore more neuroscience news and perspectives, visit thetransmitter.org . Daniel Levenstein started his NeuroAI and Dynamics Lab at Yale University about a year ago. We briefly discuss what it's like to transition from a postdoc to a principle investigator, i.e. head of the lab. But most mostly we discuss his work and ideas. Dan studies spontaneous neural activity during sleep, spec",
       "image": "https://braininspired.co/wp-content/uploads/2026/09/245-Dan-Levenstein.jpg",
@@ -1799,7 +2178,7 @@
       "section": "long",
       "minutes": 15,
       "source": "microbe.tv",
-      "by": "profvrr",
+      "by": "This Week in Virology",
       "published": "2026-11-08",
       "why": "TWiV explains results of a dengue virus human challenge which reveals that preexisting immunity shapes viral replication and broadly protective responses, and how influenza virus antagonizes self-sensing by RIG-I to enhance viral replication. Hosts: Vincent Racaniello , Alan Dove , Kathy Spindler , and Brianne Barker Click arrow to play Download TWiV 1373 (66 MB .mp3, 110 min) Subscribe (free): Apple Podcasts , RSS , email Become a patron of TWiV! Links for this episode Support science education at MicrobeTV 3:05 Democratic doctors win big in 2026 midterm elections (CIDRAP) 4:31 Florida’s dengue total jumps to 485 (CIDRAP) 7:19 Dengue virus human challenge study (Sci Transl Med) 8:48 Influenza virus and self sensing of host by RIG-I (Cell Rep) 55:05 Letters read on TWiV 1373 1:24:47 Timestamps by Jolene Ramsey. Thanks! Picks of the Week 1:38:04 Brianne – Five Science-Backed Benefits of ‘",
       "evidenceBasis": "Publisher feed excerpt",
@@ -1821,40 +2200,6 @@
       "image": "https://megaphone.imgix.net/podcasts/dc2b8d24-a61b-11f1-88be-237abfdc47ee/image/a949b1d9debbdcb105beef57d1dc3d8f.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
       "evidenceBasis": "Publisher feed excerpt",
       "durationSeconds": 3962,
-      "audioSuitable": true,
-      "links": []
-    },
-    {
-      "id": "1b1bff3677f49e962c6a",
-      "url": "https://braininspired.co/podcast/246/",
-      "title": "BI 246 Andrea Gambarotto: Cognition Requires Agency",
-      "lane": "x",
-      "format": "Audio",
-      "section": "long",
-      "minutes": 119,
-      "source": "braininspired.co",
-      "by": "Paul Middlebrooks",
-      "published": "2026-09-16",
-      "why": "Support the show to get full episodes, full archive, and join the Discord community . The Transmitter is an online publication that aims to deliver useful information, insights and tools to build bridges across neuroscience and advance research. Visit thetransmitter.org to explore the latest neuroscience news and perspectives, written by journalists and scientists. Read more about our partnership . Sign up for Brain Inspired email alerts to be notified every time a new Brain Inspired episode is released. To explore more neuroscience news and perspectives, visit thetransmitter.org . Andrea Gambarotto is a postdoctoral philosopher and researcher at the University of Luxembourg. He is an expert in the philosophy of Georg Wilhelm Friedrich Hegel, most commonly known as Hegel. More recently he has been studying the relation between some of Hegel's ideas and those of modern theoretical biology",
-      "image": "https://braininspired.co/wp-content/uploads/2026/09/246-Andrea-Gambarotto.jpg",
-      "evidenceBasis": "Publisher feed excerpt",
-      "durationSeconds": 7081,
-      "audioSuitable": true,
-      "links": []
-    },
-    {
-      "id": "365697da35d25901b83f",
-      "url": "https://www.microbe.tv/twiv/twiv-1371/",
-      "title": "TWiV 1371: How to Bat Away Marburg Virus",
-      "lane": "bio",
-      "format": "Audio",
-      "section": "long",
-      "minutes": 15,
-      "source": "microbe.tv",
-      "by": "profvrr",
-      "published": "2026-11-01",
-      "why": "TWiV discusses an outbreak of H5N1 influenza viruses in Utah farmed mink, and divergent species-specific antiviral responses in Marburg virus infected cells from reservoir bats and humans. Hosts: Vincent Racaniello , Alan Dove , and Rich Condit Click arrow to play Download TWiV 1371 (66 MB .mp3, 110 min) Subscribe (free): Apple Podcasts , RSS , email Become a patron of TWiV! Links for this episode Support science education at MicrobeTV 2:34 H5N1 influenza virus in Utah farmed mink (virological.org) 10:55 Species specific responses to Marburg virus (Cell Rep) 42:17 Letters read on TWiV 1371 1:02:47 Timestamps by Jolene Ramsey. Thanks! Picks of the Week 1:32:30 Rich – The effect of a hiding box on stress levels and body weight in Dutch shelter cats; a randomized controlled trial Alan – Edward Gorey’s version of a tarot card deck Vincent – Wellcome Global Monitor 2026: Trust in science unde",
-      "evidenceBasis": "Publisher feed excerpt",
       "audioSuitable": true,
       "links": []
     },
@@ -2126,6 +2471,367 @@
       "takeaway": "The support must not depend on the parameter, which is why the Pareto family with unknown scale is excluded.",
       "evidenceBasis": "Public page excerpt",
       "symbol": "η · T",
+      "links": []
+    },
+    {
+      "id": "532ad8232ccd39ca4dc2",
+      "url": "https://www.youtube.com/watch?v=OyFJWRnt_AY",
+      "title": "CS480/680 Lecture 19: Attention and Transformer Networks",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 83,
+      "source": "youtube.com",
+      "by": "Pascal Poupart",
+      "published": "2019-07-16",
+      "why": "A university lecture from CS480/680 by Pascal Poupart on attention mechanisms and transformer networks, worked through on a chalkboard.",
+      "image": "https://i.ytimg.com/vi/OyFJWRnt_AY/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 4958,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/OyFJWRnt_AY",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "2fa2c5dc2379a92c4e83",
+      "url": "https://www.youtube.com/watch?v=iDulhoQ2pro",
+      "title": "Attention Is All You Need",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 28,
+      "source": "youtube.com",
+      "by": "Yannic Kilcher",
+      "published": "2017-11-28",
+      "why": "He reviews the architecture and the paper's translation results.",
+      "image": "https://i.ytimg.com/vi/iDulhoQ2pro/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 1627,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/iDulhoQ2pro",
+          "label": "HackerTube"
+        },
+        {
+          "url": "https://hackertube.org/watch/iDulhoQ2pro",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "ab0f869db3cb7f4c513e",
+      "url": "https://www.youtube.com/watch?v=Ed3ioGO7g10",
+      "title": "Matter to Mind:Bioelectricity, Body Intelligence, Future of Regenerative Medicine- Dr. Michael Levin",
+      "lane": "bio",
+      "format": "Video",
+      "section": "long",
+      "minutes": 78,
+      "source": "youtube.com",
+      "by": "Harvard Extension Student Psychological Club",
+      "published": "2023-05-18",
+      "why": "Developmental and synthetic biologist Michael Levin speaks at a Harvard Extension student event on bioelectricity, body intelligence and regenerative medicine. He discusses how cell electrical networks guide growth and form.",
+      "image": "https://i.ytimg.com/vi/Ed3ioGO7g10/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 4636,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/Ed3ioGO7g10",
+          "label": "HackerTube"
+        },
+        {
+          "url": "https://hackertube.org/watch/Ed3ioGO7g10",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "17a14b3d590c857de09b",
+      "url": "https://www.youtube.com/watch?v=S27pHKBEp30",
+      "title": "LSTM is dead. Long Live Transformers!",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 29,
+      "source": "youtube.com",
+      "by": "Seattle Applied Deep Learning",
+      "published": "2019-12-03",
+      "why": "Leo Dirac explains how transformer models have replaced LSTMs in NLP. He gives background from bag of words through RNNs and LSTMs, then a technical deep dive into multi-headed self-attention and positional encoding, with sample code.",
+      "image": "https://i.ytimg.com/vi/S27pHKBEp30/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 1728,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/S27pHKBEp30",
+          "label": "HackerTube"
+        },
+        {
+          "url": "https://hackertube.org/watch/S27pHKBEp30",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "e5bb2dbd56c41b9eef09",
+      "url": "https://www.youtube.com/watch?v=RjD1aLm4Thg",
+      "title": "What Bodies Think About: Bioelectric Computation Outside the Nervous System - NeurIPS 2018",
+      "lane": "bio",
+      "format": "Video",
+      "section": "long",
+      "minutes": 53,
+      "source": "youtube.com",
+      "by": "The Artificial Intelligence Channel",
+      "published": "2018-12-05",
+      "why": "Michael Levin's NeurIPS 2018 talk on bioelectric computation outside the nervous system, showing how cell electrical networks shape development and regeneration. It covers morphological information processing in living tissue.",
+      "image": "https://i.ytimg.com/vi/RjD1aLm4Thg/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 3127,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/RjD1aLm4Thg",
+          "label": "HackerTube"
+        },
+        {
+          "url": "https://hackertube.org/watch/RjD1aLm4Thg",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "4a1433591c7cec3aed0a",
+      "url": "https://www.youtube.com/watch?v=bZQun8Y4L2A",
+      "title": "State of GPT | BRK216HFS",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 43,
+      "source": "youtube.com",
+      "by": "Microsoft Developer",
+      "published": "2023-05-25",
+      "why": "Andrej Karpathy walks through how GPT assistants are trained, from tokenization and pretraining to supervised finetuning and RLHF, and gives practical prompting strategies and a view of the tooling ecosystem.",
+      "image": "https://i.ytimg.com/vi/bZQun8Y4L2A/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 2560,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/bZQun8Y4L2A",
+          "label": "HackerTube"
+        },
+        {
+          "url": "https://hackertube.org/watch/bZQun8Y4L2A",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "54ebe8284c59061448aa",
+      "url": "https://www.youtube.com/watch?v=lG4VkPoG3ko",
+      "title": "The medical test paradox, and redesigning Bayes' rule",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 22,
+      "source": "youtube.com",
+      "by": "3Blue1Brown",
+      "published": "2020-12-22",
+      "why": "3Blue1Brown explains why positive results on accurate medical tests are often false positives, and reframes Bayes' rule using likelihood ratios (Bayes factors) to update odds. It uses visual examples to make the reasoning intuitive.",
+      "image": "https://i.ytimg.com/vi/lG4VkPoG3ko/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 1274,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/lG4VkPoG3ko",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "5e8de1a6f5db3d250c58",
+      "url": "https://www.youtube.com/watch?v=7xTGNNLPyMI",
+      "title": "Deep Dive into LLMs like ChatGPT",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 212,
+      "source": "youtube.com",
+      "by": "Andrej Karpathy",
+      "published": "2025-02-05",
+      "why": "Andrej Karpathy's three-hour-plus general-audience deep dive into how ChatGPT-style LLMs are built, covering the full training stack from pretraining to post-training. It also gives mental models for their quirks, like hallucination, and how to use them well.",
+      "image": "https://i.ytimg.com/vi/7xTGNNLPyMI/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 12684,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/7xTGNNLPyMI",
+          "label": "HackerTube"
+        },
+        {
+          "url": "https://hackertube.org/watch/7xTGNNLPyMI",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "709367c9f914b30a756d",
+      "url": "https://www.youtube.com/watch?v=NNnIGh9g6fA",
+      "title": "1. Introduction to Human Behavioral Biology",
+      "lane": "bio",
+      "format": "Video",
+      "section": "long",
+      "minutes": 58,
+      "source": "youtube.com",
+      "by": "Stanford",
+      "published": "2011-02-01",
+      "why": "The opening lecture of Robert Sapolsky's Stanford course on Human Behavioral Biology, explaining the course premise and how to avoid categorical thinking. It starts a roughly 25-lecture series on how biology, genes, hormones and environment shape behavior.",
+      "image": "https://i.ytimg.com/vi/NNnIGh9g6fA/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 3435,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/NNnIGh9g6fA",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "2e5b28f9b0c9b69bdb93",
+      "url": "https://www.youtube.com/watch?v=1-dUkyn_fZA",
+      "title": "Emacs + org-mode + python in reproducible research; SciPy 2013 Presentation",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 22,
+      "source": "youtube.com",
+      "by": "Enthought",
+      "published": "2013-07-02",
+      "why": "John Kitchin shows how Emacs org-mode with Python lets researchers combine narrative, math, figures and executable code in one document. It exports to LaTeX, HTML and PDF, and he used it for papers and e-books.",
+      "image": "https://i.ytimg.com/vi/1-dUkyn_fZA/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 1276,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/1-dUkyn_fZA",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "78b972f1e994ed3eaa08",
+      "url": "https://www.youtube.com/watch?v=7jiPeIFXb6U",
+      "title": "I don't like notebooks.- Joel Grus (Allen Institute for Artificial Intelligence)",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 57,
+      "source": "youtube.com",
+      "by": "O'Reilly",
+      "published": "2018-10-10",
+      "why": "Joel Grus's JupyterCon talk explaining why he dislikes Jupyter notebooks. He covers hidden state, trouble with reproducibility and testing, and how notebooks frustrate teaching. He shows his preferred workflow and what Jupyter could change.",
+      "image": "https://i.ytimg.com/vi/7jiPeIFXb6U/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 3373,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/7jiPeIFXb6U",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "d785c13bd2d6329e5a3d",
+      "url": "https://www.youtube.com/watch?v=r6sGWTCMz2k",
+      "title": "But what is a Fourier series? From heat flow to drawing with circles | DE4",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 25,
+      "source": "youtube.com",
+      "by": "3Blue1Brown",
+      "published": "2019-06-30",
+      "why": "3Blue1Brown introduces Fourier series, from the heat equation to drawing arbitrary shapes with rotating circles. It builds a visual intuition for decomposing functions into sine waves.",
+      "image": "https://i.ytimg.com/vi/r6sGWTCMz2k/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 1487,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/r6sGWTCMz2k",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "6f8091d49620e2653350",
+      "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g",
+      "title": "[1hr Talk] Intro to Large Language Models",
+      "lane": "ai",
+      "format": "Video",
+      "section": "long",
+      "minutes": 60,
+      "source": "youtube.com",
+      "by": "Andrej Karpathy",
+      "published": "2023-11-23",
+      "why": "Andrej Karpathy gives a one-hour general-audience introduction to large language models, covering what they are, how they are trained, comparisons to operating systems, and security challenges such as jailbreaks.",
+      "image": "https://i.ytimg.com/vi/zjkBMFhNj_g/hqdefault.jpg",
+      "evidenceBasis": "HackerTube video metadata; transcript not reviewed",
+      "durationSeconds": 3588,
+      "audioSuitable": false,
+      "links": [
+        {
+          "url": "https://hackertube.org/watch/zjkBMFhNj_g",
+          "label": "HackerTube"
+        },
+        {
+          "url": "https://hackertube.org/watch/zjkBMFhNj_g",
+          "label": "HackerTube"
+        }
+      ]
+    },
+    {
+      "id": "1b1bff3677f49e962c6a",
+      "url": "https://braininspired.co/podcast/246/",
+      "title": "BI 246 Andrea Gambarotto: Cognition Requires Agency",
+      "lane": "x",
+      "format": "Audio",
+      "section": "long",
+      "minutes": 119,
+      "source": "braininspired.co",
+      "by": "Paul Middlebrooks",
+      "published": "2026-09-16",
+      "why": "Support the show to get full episodes, full archive, and join the Discord community . The Transmitter is an online publication that aims to deliver useful information, insights and tools to build bridges across neuroscience and advance research. Visit thetransmitter.org to explore the latest neuroscience news and perspectives, written by journalists and scientists. Read more about our partnership . Sign up for Brain Inspired email alerts to be notified every time a new Brain Inspired episode is released. To explore more neuroscience news and perspectives, visit thetransmitter.org . Andrea Gambarotto is a postdoctoral philosopher and researcher at the University of Luxembourg. He is an expert in the philosophy of Georg Wilhelm Friedrich Hegel, most commonly known as Hegel. More recently he has been studying the relation between some of Hegel's ideas and those of modern theoretical biology",
+      "image": "https://braininspired.co/wp-content/uploads/2026/09/246-Andrea-Gambarotto.jpg",
+      "evidenceBasis": "Publisher feed excerpt",
+      "durationSeconds": 7081,
+      "audioSuitable": true,
+      "links": []
+    },
+    {
+      "id": "365697da35d25901b83f",
+      "url": "https://www.microbe.tv/twiv/twiv-1371/",
+      "title": "TWiV 1371: How to Bat Away Marburg Virus",
+      "lane": "bio",
+      "format": "Audio",
+      "section": "long",
+      "minutes": 15,
+      "source": "microbe.tv",
+      "by": "profvrr",
+      "published": "2026-11-01",
+      "why": "TWiV discusses an outbreak of H5N1 influenza viruses in Utah farmed mink, and divergent species-specific antiviral responses in Marburg virus infected cells from reservoir bats and humans. Hosts: Vincent Racaniello , Alan Dove , and Rich Condit Click arrow to play Download TWiV 1371 (66 MB .mp3, 110 min) Subscribe (free): Apple Podcasts , RSS , email Become a patron of TWiV! Links for this episode Support science education at MicrobeTV 2:34 H5N1 influenza virus in Utah farmed mink (virological.org) 10:55 Species specific responses to Marburg virus (Cell Rep) 42:17 Letters read on TWiV 1371 1:02:47 Timestamps by Jolene Ramsey. Thanks! Picks of the Week 1:32:30 Rich – The effect of a hiding box on stress levels and body weight in Dutch shelter cats; a randomized controlled trial Alan – Edward Gorey’s version of a tarot card deck Vincent – Wellcome Global Monitor 2026: Trust in science unde",
+      "evidenceBasis": "Publisher feed excerpt",
+      "audioSuitable": true,
       "links": []
     }
   ]

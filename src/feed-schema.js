@@ -9,6 +9,21 @@ export const REASONS = ['Too basic', 'Too advanced', 'Already know it', 'Not my 
 export function safeURL(value) {
   try { const u = new URL(value); return ['https:', 'http:'].includes(u.protocol) && !u.username && !u.password ? u.href : ''; } catch { return ''; }
 }
+export function contentKey(item) {
+  const url = new URL(item.url);
+  const host = url.hostname.replace(/^www\./,'');
+  if (['youtube.com','m.youtube.com','youtu.be'].includes(host)) {
+    const video = host === 'youtu.be' ? url.pathname.slice(1) : url.searchParams.get('v');
+    if (video) return `youtube:${video}`;
+  }
+  for (const key of [...url.searchParams.keys()]) if (key.startsWith('utm_') || ['fbclid','gclid'].includes(key)) url.searchParams.delete(key);
+  url.searchParams.sort();
+  return host + url.pathname.replace(/\/$/,'') + url.search;
+}
+export function contentKeys(item) {
+  const title = item.title.toLowerCase().replace(/[^\p{L}\p{N}_]+/gu,'');
+  return [contentKey(item),...(title.length >= 24 ? [`title:${title}`] : [])];
+}
 export function validateEdition(e) {
   const fail = message => { throw new Error(`Feed edition: ${message}`); };
   if (![1,2].includes(e.schema) || !/^\d{4}-\d{2}-\d{2}$/.test(e.date) || !Number.isFinite(Date.parse(e.publishedAt))) fail('invalid identity');
@@ -39,6 +54,11 @@ export function validateEdition(e) {
       if (key === 'audio' && selected.some(item=>item.format !== 'Audio' && !(item.format === 'Video' && item.audioSuitable))) fail('non-listenable item in Audio');
       if (key === 'playlists' && selected.some(item=>item.format !== 'Playlist')) fail('non-playlist in Playlists');
       if (key === 'news' && selected.some(item=>!Number.isFinite(Date.parse(item.published)) || Date.parse(e.date)-Date.parse(item.published) < 0 || Date.parse(e.date)-Date.parse(item.published) > 14*86400000)) fail('undated or stale news');
+    }
+    for (const [first,second] of [['home','news'],['video','audio']]) {
+      const lookup = new Map(e.items.map(item=>[item.id,item]));
+      const used = new Set(e.collections[first].flatMap(id=>contentKeys(lookup.get(id))));
+      if (e.collections[second].some(id=>contentKeys(lookup.get(id)).some(key=>used.has(key)))) fail(`overlap between ${first} and ${second}`);
     }
   }
   if (e.earlier !== undefined && !Array.isArray(e.earlier)) fail('invalid earlier picks');
