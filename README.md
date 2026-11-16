@@ -1,10 +1,10 @@
 # feed.
 
-A finite reading edition for AI, biology and the space between them.
+A collection of reading, research and media for AI, biology and the space between them.
 
-Today brings together articles, research and concepts worth understanding.
-Watch gives talks and tutorials room to breathe. The Paper interface shares
-typography, spacing and navigation across both views.
+Home contains articles and concepts. News follows research developments. Video,
+Audio and Playlists provide separate media collections, refreshed every four days.
+The Paper interface uses compact navigation, search and topic filters.
 
 This is the public frontend. Library, the curator's feedback, saved items,
 reading history and original knowledge archive belong to a separate private

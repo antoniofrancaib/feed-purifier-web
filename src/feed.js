@@ -1,6 +1,6 @@
-import { LANES, SECTIONS, REASONS, safeURL, filterItems, readingTime, totalTime } from './feed-schema.js';
+import { LANES, REASONS, safeURL, filterItems, readingTime } from './feed-schema.js';
 import { FeedbackSync } from './feed-sync.js';
-import { isConcept, formatLabel, openLabel, libraryItems, cardSummary } from './feed-catalogue.js';
+import { isConcept, formatLabel, openLabel, libraryItems, collectionItems } from './feed-catalogue.js';
 const PUBLIC = globalThis.FEED_PUBLIC === true;
 const OWNER_ORIGIN = 'https://antonio-learn.antoniofrancaib.workers.dev';
 
@@ -24,7 +24,7 @@ const sync = PUBLIC ? {ready:Promise.resolve(),doc:{outbox:[],conflicts:[]},stat
 });
 const editions = new Map();
 const choice = id => state[id] || {};
-export const isFeedRoute = path => /^\/(?:today|watch|library|canon|queue|cut|sources|taste|editions(?:\/\d{4}-\d{2}-\d{2})?|item\/[a-z0-9-]+)?\/?$/.test(path);
+export const isFeedRoute = path => /^\/(?:home|today|news|video|watch|audio|playlists|library|canon|queue|cut|sources|taste|editions(?:\/\d{4}-\d{2}-\d{2})?|item\/[a-z0-9-]+)?\/?$/.test(path);
 const json = async path => { const r = await fetch(path, {cache:'no-cache'}); if (!r.ok || !r.headers.get('content-type')?.includes('json')) throw new Error('Feed unavailable'); return r.json(); };
 async function loadFeed() {
   if (!loading) loading = Promise.all(['/feed-data/latest.json','/feed-data/index.json','/feed-data/sources.json',...(!PUBLIC ? ['/feed-data/taste.json'] : [])].map(json)).then(values => {
@@ -39,25 +39,39 @@ function actions(item, full = false) {
   return `<div class="f-actions">${full ? external(item.url, openLabel(item), 'f-btn primary') : ''}${[['valuable','✓','Valuable'],['dismissed','×','Not for me'],['queued','+','Save'],['read','✓','Read']].map(([key, symbol, label]) => `<button type="button" class="f-btn ${full ? '' : 'quiet'}" data-feed-action="${key}" data-id="${item.id}" aria-pressed="${Boolean(s[key])}"><span aria-hidden="true">${symbol}</span> ${key === 'queued' && s[key] ? 'Saved' : label}</button>`).join('')}</div>`;
 }
 function media(item) {
-  if (isConcept(item)) return `<div class="f-media f-concept-art"><span class="f-concept-symbol" aria-hidden="true">${esc(item.symbol || 'Aa')}</span><span>CONCEPT</span></div>`;
-  const fallback = `<div class="f-tile"><b>${esc(formatLabel(item))}</b><span>${esc(readingTime(item.minutes))}<br>${esc(item.source)}</span></div>`;
-  return `<div class="f-media">${fallback}${safeURL(item.image) ? `<img class="${item.fit === 'contain' ? 'contain' : ''}" src="${esc(item.image)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}</div>`;
+  const concept = isConcept(item);
+  const name = (item.by || item.source || '').replace(/^www\./,'');
+  return `<div class="f-media${concept ? ' f-concept-art' : ''}"><div class="f-tile"><span>${esc(formatLabel(item))}</span><b>${esc(concept ? item.symbol || 'Aa' : name)}</b></div>${safeURL(item.image) ? `<img src="${esc(item.image)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ''}</div>`;
 }
-function card(item, number, lead = false) {
-  const s = choice(item.id);
-  return `<article class="f-item${lead ? ' lead' : ''}${s.read || s.dismissed ? ' muted' : ''}" data-feed-item="${item.id}">
-    <span class="f-number">${String(number).padStart(2,'0')}</span>
-    <div class="f-body"><div class="f-meta">${lane(item.lane)}<span>${esc(formatLabel(item))}</span><span>${readingTime(item.minutes)}</span><span class="f-source">${esc(item.source)}</span></div>
-    <h3>${link(itemURL(item), esc(item.title))}</h3><p class="f-why">${esc(cardSummary(item))}</p>
-    <p class="f-signal">${s.read ? '<span class="f-tag">Read</span>' : ''}${s.queued ? '<span class="f-tag">In queue</span>' : ''}</p>
-    <div class="f-open">${external(item.url, openLabel(item))}${link(itemURL(item), 'Details')}</div></div>
-    ${media(item)}${actions(item)}</article>`;
+function duration(item) {
+  if (item.format === 'Playlist') return item.videoCount ? `${item.videoCount} videos` : 'Playlist';
+  const n = item.durationSeconds;
+  if (!Number.isInteger(n) || n <= 0) return '';
+  const h = Math.floor(n / 3600), m = Math.floor(n % 3600 / 60), sec = n % 60;
+  return h ? `${h}:${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}` : `${m}:${String(sec).padStart(2,'0')}`;
 }
+const displayTime = item => item.format === 'Playlist' ? (item.videoCount ? `${item.videoCount} videos` : '') : ['Video','Audio'].includes(item.format) ? duration(item) : readingTime(item.minutes);
+function card(item) {
+  const isMedia = ['Video','Audio','Playlist'].includes(item.format);
+  const stamp = duration(item);
+  return `<article class="f-item f-card${isMedia ? ' f-video' : ''}${!isMedia && !isConcept(item) && !item.image ? ' f-text-card' : ''}${choice(item.id).read ? ' muted' : ''}" data-feed-item="${item.id}">
+    <a class="f-card-image" href="${esc(safeURL(item.url))}" target="_blank" rel="noopener noreferrer" aria-label="${esc(openLabel(item) + ' ' + item.title)}">${media(item)}${stamp ? `<span class="f-duration">${stamp}</span>` : ''}</a>
+    <div class="f-card-body"><h2>${external(item.url,esc(item.title))}</h2><div class="f-card-source" title="${esc(item.by || item.source)}">${esc(item.by || item.source)}</div><div class="f-card-meta">${lane(item.lane)}<span>${esc(formatLabel(item))}</span>${item.published ? `<time datetime="${esc(item.published)}">${formatDate(item.published)}</time>` : ''}${link(itemURL(item),'Details','f-card-details')}</div>${actions(item)}</div></article>`;
+}
+const icons = {
+ home:'<path d="m3 10 9-7 9 7v10H3Z"/><path d="M9 20v-7h6v7"/>',
+ news:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h5v5H7zM15 8h3M15 12h3M7 16h11"/>',
+ video:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3Z"/>',
+ audio:'<path d="M4 14v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="12" width="4" height="8" rx="2"/><rect x="17" y="12" width="4" height="8" rx="2"/>',
+ playlists:'<path d="M3 5h15M3 10h15M3 15h7m4-1 7 4-7 4Z"/>',
+ library:'<path d="M4 4h4v16H4zM11 4h4v16h-4zM18 4l3 15"/>'
+};
 function header(page) {
+  const active = {'/today':'/home','/':'/home','/watch':'/video'}[page] || page;
   const libraryURL = PUBLIC ? `${OWNER_ORIGIN}/library` : '/library';
-  document.querySelector('#library-navigation').innerHTML = [['/today','Today'],['/watch','Watch'],[libraryURL,'Library']].map(([url,label]) => `<a data-library-link class="header-link${page === url ? ' is-current' : ''}" href="${url}"${page === url ? ' aria-current="page"' : ''}>${label}</a>`).join('');
-  document.querySelector('#subject-navigation').innerHTML = '';
-  document.querySelector('#notebook-footer').innerHTML = `<span>feed<span class="f-stop">.</span> <span class="f-footer-motto">Attention, well spent.</span></span><span class="f-footer-links">${link('/sources','Sources')}${PUBLIC ? `<a href="${OWNER_ORIGIN}/today">Sign in</a>` : link('/taste','Settings')}${external('https://github.com/antoniofrancaib/feed-purifier-web','GitHub')}</span>`;
+  document.querySelector('#library-navigation').innerHTML = [...['home','news','video','audio','playlists'].map(key=>['/'+key,key]),[libraryURL,'library']].map(([url,key]) => `<a data-library-link class="header-link${active === url ? ' is-current' : ''}${key === 'library' ? ' f-nav-library' : ''}" href="${url}"${active === url ? ' aria-current="page"' : ''}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[key]}</svg><span>${key[0].toUpperCase()+key.slice(1)}</span></a>`).join('');
+  document.querySelector('#subject-navigation').innerHTML = `<form class="f-global-search" data-feed-search role="search"><label class="sr-only" for="feed-search">Search this section</label><input id="feed-search" name="q" type="search" value="${esc(new URLSearchParams(location.search).get('q') || '')}" placeholder="Search"><button type="submit" aria-label="Search"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></button></form>`;
+  document.querySelector('#notebook-footer').innerHTML = `<span class="f-footer-links">${link('/sources','Sources')}${link('/editions','Archive')}${PUBLIC ? `<a href="${esc(OWNER_ORIGIN + location.pathname + location.search)}">Sign in</a>` : link('/taste','Settings')}${external('https://github.com/antoniofrancaib/feed-purifier-web','GitHub')}</span>`;
 }
 function updateSaveNotice(client) {
   const notice = document.querySelector('[data-save-notice]');
@@ -73,53 +87,42 @@ function filterURL(key, value) {
 }
 function filters(items) {
   const params = new URLSearchParams(location.search), selected = params.get('lane') || 'all';
-  return `<nav class="f-lanes" aria-label="Topic">${[['all','All'],...Object.entries(LANES)].map(([id,label]) => `<a data-library-link href="${esc(filterURL('lane',id))}"${id === selected ? ' aria-current="true"' : ''}>${id === 'all' ? label : lane(id)}<span>${id === 'all' ? items.length : items.filter(i=>i.lane === id).length}</span></a>`).join('')}</nav>
-  <form class="f-search" data-feed-search><label for="feed-search">Search this selection</label><div><input id="feed-search" name="q" type="search" value="${esc(params.get('q') || '')}" placeholder="A topic, author or source"><button class="f-btn" type="submit">Find</button></div></form>
-  <label class="f-format" for="feed-format">Format<select id="feed-format"><option value="all">Any format</option>${[...new Set(items.map(i=>i.format))].sort().map(f=>`<option${params.get('format') === f ? ' selected' : ''}>${esc(f)}</option>`).join('')}</select></label>`;
+  return `<div class="f-toolbar"><nav class="f-lanes" aria-label="Topic">${[['all','All'],...Object.entries(LANES)].map(([id,label]) => `<a data-library-link href="${esc(filterURL('lane',id))}"${id === selected ? ' aria-current="true"' : ''}>${label}</a>`).join('')}</nav>${new Set(items.map(i=>i.format)).size > 1 ? `<select id="feed-format" aria-label="Format"><option value="all">All formats</option>${[...new Set(items.map(i=>i.format))].sort().map(f=>`<option${params.get('format') === f ? ' selected' : ''}>${esc(f)}</option>`).join('')}</select>` : ''}</div>`;
 }
-const formatDate = date => new Date(`${date}T12:00:00`).toLocaleDateString('en-GB',{day:'numeric',month:'long'});
-function side(e, items, page) {
-  const today = page === '/today';
-  const minutes = e.items.filter(i=>i.section !== 'long').reduce((n,i)=>n+i.minutes,0);
-  const titles = {'/watch':'Worth watching.','/library':'Your library.','/queue':'Saved for later.','/canon':'The archive.','/cut':'Editorial decisions'};
-  return `<aside class="f-side"><p class="f-eyebrow">${today ? 'THE DAILY EDITION' : page === '/watch' ? 'TALKS · TUTORIALS · IDEAS' : 'A COLLECTION THAT GROWS WITH YOU'}</p>
-  <h1 tabindex="-1">${today ? formatDate(e.date) : titles[page] || formatDate(e.date)}</h1>
-  <p class="f-facts">${today ? `${e.items.length} picks · ${totalTime(minutes)}<br>AI, biology & everything between.` : page === '/watch' ? 'Make time for a good idea.' : page === '/library' ? 'The work you want to keep.' : ''}</p>
-  ${page !== '/cut' ? filters(items) : ''}
-  <div class="f-side-links">${link('/editions','Previous editions ↗')}${!PUBLIC && page === '/library' ? link('/subjects/machine-learning','Learn archive ↗') : ''}</div></aside>`;
-}
-function videoCard(item) {
-  return `<article class="f-video" data-feed-item="${item.id}"><a class="f-video-image" href="${esc(safeURL(item.url))}" target="_blank" rel="noopener noreferrer" aria-label="Watch ${esc(item.title)}">${media(item)}<span class="f-play" aria-hidden="true">▶</span><span class="f-duration">${readingTime(item.minutes)}</span></a><div class="f-meta">${lane(item.lane)}<span>${esc(item.by || item.source)}</span></div><h3>${link(itemURL(item),esc(item.title))}</h3><p class="f-why">${esc(cardSummary(item))}</p>${actions(item)}</article>`;
-}
+const formatDate = value => {
+  const date = new Date(value.length === 10 ? `${value}T12:00:00` : value);
+  return Number.isFinite(date.getTime()) ? date.toLocaleDateString('en-GB',{day:'numeric',month:'short',...(date.getFullYear() !== new Date().getFullYear() ? {year:'numeric'} : {})}) : '';
+};
 function libraryView(items) {
   const view = new URLSearchParams(location.search).get('view') || 'valuable';
   const tabs = [['valuable','Valuable'],['saved','Saved for later'],['read','Read']];
   const chosen = libraryItems(items,state,view);
   const filtered = filterItems(chosen,Object.fromEntries(new URLSearchParams(location.search)));
-  return `<nav class="f-library-tabs" aria-label="Library collections">${tabs.map(([key,label])=>`<a data-library-link href="${esc(filterURL('view',key))}"${view === key ? ' aria-current="page"' : ''}>${label}<span>${libraryItems(items,state,key).length}</span></a>`).join('')}</nav>${filtered.length ? `<div class="f-library-table"><div class="f-library-head"><span>WORK</span><span>FORMAT / SOURCE</span><span>TIME</span></div>${filtered.map(item=>`<article class="f-library-row" data-feed-item="${item.id}"><div><div class="f-meta">${lane(item.lane)}</div><h3>${link(itemURL(item),esc(item.title))}</h3><p>${esc(item.why)}</p>${actions(item)}</div><div class="f-library-source"><span>${esc(formatLabel(item))}</span><a href="${esc(safeURL(item.url))}" target="_blank" rel="noopener noreferrer">${esc(item.source)} ↗</a></div><span class="f-library-time">${readingTime(item.minutes)}</span></article>`).join('')}</div>` : `<div class="f-empty f-library-empty"><span class="f-empty-symbol" aria-hidden="true">f<span>.</span></span><h2>${chosen.length ? 'No matches.' : view === 'valuable' ? 'Keep what stays with you.' : view === 'saved' ? 'A little room for later.' : 'A record of good reading.'}</h2><p>${chosen.length ? 'Try another topic or search.' : view === 'valuable' ? 'Mark a recommendation Valuable to add it here.' : view === 'saved' ? 'Save something from Today or Watch.' : 'Items you mark Read will appear here.'}</p>${link('/today','Explore the edition →')}</div>`}`;
+  return `<nav class="f-library-tabs" aria-label="Library collections">${tabs.map(([key,label])=>`<a data-library-link href="${esc(filterURL('view',key))}"${view === key ? ' aria-current="page"' : ''}>${label}<span>${libraryItems(items,state,key).length}</span></a>`).join('')}</nav>${filtered.length ? `<div class="f-library-table"><div class="f-library-head"><span>WORK</span><span>FORMAT / SOURCE</span><span>TIME</span></div>${filtered.map(item=>`<article class="f-library-row" data-feed-item="${item.id}"><div><div class="f-meta">${lane(item.lane)}</div><h3>${link(itemURL(item),esc(item.title))}</h3>${actions(item)}</div><div class="f-library-source"><span>${esc(formatLabel(item))}</span><a href="${esc(safeURL(item.url))}" target="_blank" rel="noopener noreferrer">${esc(item.source)} ↗</a></div><span class="f-library-time">${displayTime(item) || '—'}</span></article>`).join('')}</div>` : `<div class="f-empty f-library-empty"><span class="f-empty-symbol" aria-hidden="true">f<span>.</span></span><h2>${chosen.length ? 'No matches.' : view === 'valuable' ? 'No valuable items yet.' : view === 'saved' ? 'Nothing saved for later.' : 'No read items yet.'}</h2><p>${chosen.length ? 'Try another topic or search.' : view === 'valuable' ? 'Mark a recommendation Valuable to add it here.' : view === 'saved' ? 'Save an item to keep it here.' : 'Items you mark Read will appear here.'}</p>${link('/today','Browse Home →')}</div>`}`;
 }
 function itemPage(item) {
   const s = choice(item.id);
-  return `<div class="f-crumb">${link(item.edition ? `/editions/${item.edition}` : '/today','← Back to the edition')}</div><div class="f-detail"><article><div class="f-meta">${lane(item.lane)}<span>${esc(formatLabel(item))}</span><span>${readingTime(item.minutes)}</span><span>${esc(item.source)}</span></div>
+  return `<div class="f-crumb">${link(item.edition ? `/editions/${item.edition}` : '/today','← Back to the edition')}</div><div class="f-detail"><article><div class="f-meta">${lane(item.lane)}<span>${esc(formatLabel(item))}</span>${displayTime(item) ? `<span>${displayTime(item)}</span>` : ''}<span>${esc(item.source)}</span></div>
   <h1 tabindex="-1">${esc(item.title)}</h1><p class="f-facts">${esc(item.by)}${item.published ? ` · ${esc(item.published)}` : ''}</p>${actions(item,true)}${media(item)}
-  <section class="f-block"><h2>Why it’s here</h2><p class="f-lede">${esc(item.why)}</p>${item.takeaway ? `<dl><dt>You’ll take away</dt><dd>${esc(item.takeaway)}</dd></dl>` : ''}</section>
-  <section class="f-block"><h2>The evidence</h2><p>${esc(item.signal || 'Selected for topic fit.')}</p><p class="f-hint">Curation based on: ${esc(item.evidenceBasis || 'Source metadata')}. ${item.format === 'Preprint' ? 'This work has not necessarily been peer reviewed. ' : ''}Popularity does not establish correctness. Reading times are estimates.</p></section></article>
+  <section class="f-block"><h2>About</h2><p class="f-lede">${esc(item.why)}</p>${item.takeaway ? `<dl><dt>Summary</dt><dd>${esc(item.takeaway)}</dd></dl>` : ''}</section>
+  <section class="f-block"><h2>The evidence</h2><p>${esc(item.signal || item.source)}</p><p class="f-hint">${esc(item.evidenceBasis || 'Source metadata')}. ${item.format === 'Preprint' ? 'This work has not necessarily been peer reviewed. ' : ''}</p></section></article>
   <aside><section class="f-block"><h2>At the source</h2><div class="f-evidence-links">${external(item.url,esc(item.source))}${(item.links || []).map(l=>external(l.url,esc(l.label))).join('')}</div></section>
   ${!PUBLIC ? `<section class="f-block"><h2>Your feedback</h2><div class="f-reasons">${REASONS.map(r=>`<button class="f-btn" data-feed-action="reason" data-id="${item.id}" data-reason="${r}" aria-pressed="${s.reason === r}">${r}</button>`).join('')}</div><p class="f-hint">${link('/taste','Settings →')}</p></section>` : ''}</aside></div>`;
 }
 function settingsPage(page) {
-  if (page === '/sources') return `<div class="f-settings"><p class="f-eyebrow">Where good work comes from</p><h1 tabindex="-1">The sources</h1><p class="f-intro">Independent writers, research labs, papers, videos and open code. Collected every 12 hours; assessed for substance and fit.</p><div class="f-source-list">${sources.sources.map(s=>{
+  if (page === '/sources') return `<div class="f-settings"><h1 tabindex="-1">Sources</h1><p class="f-intro">Research labs, journals, independent writers, podcasts and video collections. Refreshed every four days.</p><div class="f-source-list">${sources.sources.map(s=>{
     const health = latest.sources?.find(h=>h.id === s.id);
     return `<article><div><h2>${external(s.homepage || `https://${new URL(s.url).hostname.replace(/^api\./,'')}`,esc(s.name))}</h2><p>${esc(s.format === 'Video' ? 'Video' : s.lane === 'bio' ? 'Life sciences' : s.lane === 'x' ? 'AI × Bio' : 'AI & computing')}</p></div>${!PUBLIC && health && !health.ok ? '<span class="f-tag">Needs attention</span>' : ''}</article>`;
   }).join('')}</div></div>`;
-  if (page === '/taste') return `<div class="f-settings"><p class="f-eyebrow">A feed with a point of view</p><h1 tabindex="-1">Settings</h1><p class="f-intro">Deepen your understanding of AI and life sciences. Keep the signal; make room to think.</p><div class="f-taste">${taste.text.split(/\n\s*\n/).filter(p=>!p.startsWith('#')).map(p=>`<p>${esc(p)}</p>`).join('')}</div><section class="f-block"><h2>Your feedback</h2><p>Manage your saved choices and editorial preferences.</p><p>${sync.doc.outbox.length} changes waiting · ${sync.doc.conflicts.length} conflicts${sync.doc.lastSyncedAt ? ` · Last fetched ${esc(new Date(sync.doc.lastSyncedAt).toLocaleString())}` : ''}</p><div class="f-actions"><button class="f-btn" data-feed-sync>Sync now</button><button class="f-btn" data-feed-export>Export backup</button>${external('https://github.com/antoniofrancaib/feed-purifier/edit/main/content/feed/taste.md','Edit the editorial brief','f-btn')}</div><p class="f-hint">${latest.feedback?.mode === 'cloud' ? `This edition incorporated ${latest.feedback.count} feedback items, fetched ${esc(new Date(latest.feedback.fetchedAt).toLocaleString())}.` : 'This edition has not yet incorporated automatically synchronized feedback.'}</p><p class="f-hint">${link('/cut','Editorial decisions')} · ${link('/sources','Source health')} · ${link('/subjects/machine-learning','Learn archive')}</p>${sync.doc.conflicts.map(c=>`<article class="f-block"><h3>${esc(c.item.title)}</h3><p>Both devices changed ${esc(c.field)}. Synced choice: ${esc(JSON.stringify(c.server?.value ?? false))}. Your pending choice: ${esc(JSON.stringify(c.value))}.</p><div class="f-actions"><button class="f-btn" data-feed-resolve="${c.eventId}" data-keep="true">Keep my change</button><button class="f-btn" data-feed-resolve="${c.eventId}">Use synced choice</button></div></article>`).join('')}</section></div>`;
-  return `<div class="f-settings"><p class="f-eyebrow">The archive</p><h1 tabindex="-1">Previous editions</h1><div class="f-source-list">${index.editions.map(e=>`<article>${link('/editions/'+e.date,formatDate(e.date)+' · '+e.date.slice(0,4))}<span>${e.count} picks</span></article>`).join('')}</div></div>`;
+  if (page === '/taste') return `<div class="f-settings"><h1 tabindex="-1">Settings</h1><div class="f-taste">${taste.text.split(/\n\s*\n/).filter(p=>!p.startsWith('#')).map(p=>`<p>${esc(p)}</p>`).join('')}</div><section class="f-block"><h2>Your feedback</h2><p>Manage your saved choices and editorial preferences.</p><p>${sync.doc.outbox.length} changes waiting · ${sync.doc.conflicts.length} conflicts${sync.doc.lastSyncedAt ? ` · Last fetched ${esc(new Date(sync.doc.lastSyncedAt).toLocaleString())}` : ''}</p><div class="f-actions"><button class="f-btn" data-feed-sync>Sync now</button><button class="f-btn" data-feed-export>Export backup</button>${external('https://github.com/antoniofrancaib/feed-purifier/edit/main/content/feed/taste.md','Edit the editorial brief','f-btn')}</div><p class="f-hint">${latest.feedback?.mode === 'cloud' ? `This edition incorporated ${latest.feedback.count} feedback items, fetched ${esc(new Date(latest.feedback.fetchedAt).toLocaleString())}.` : 'This edition has not yet incorporated automatically synchronized feedback.'}</p><p class="f-hint">${link('/cut','Editorial decisions')} · ${link('/sources','Source health')} · ${link('/subjects/machine-learning','Learn archive')}</p>${sync.doc.conflicts.map(c=>`<article class="f-block"><h3>${esc(c.item.title)}</h3><p>Both devices changed ${esc(c.field)}. Synced choice: ${esc(JSON.stringify(c.server?.value ?? false))}. Your pending choice: ${esc(JSON.stringify(c.value))}.</p><div class="f-actions"><button class="f-btn" data-feed-resolve="${c.eventId}" data-keep="true">Keep my change</button><button class="f-btn" data-feed-resolve="${c.eventId}">Use synced choice</button></div></article>`).join('')}</section></div>`;
+  return `<div class="f-settings"><h1 tabindex="-1">Archive</h1><div class="f-source-list">${index.editions.map(e=>`<article>${link('/editions/'+e.date,formatDate(e.date)+' · '+e.date.slice(0,4))}<span>${e.count} picks</span></article>`).join('')}</div></div>`;
 }
 
 export async function renderFeed(main, current = () => true) {
   document.body.dataset.page = 'feed';
   document.body.classList.add('feed-mode');
-  const route = location.pathname.replace(/\/$/, '') || '/today';
+  const path = location.pathname.replace(/\/$/, '') || '/home';
+  const route = {'/today':'/home','/watch':'/video'}[path] || path;
   header(route.startsWith('/item/') || /^\/editions\//.test(route) ? '/today' : route);
   try { await loadFeed(); await sync.ready; } catch {
     if (current()) main.innerHTML = '<div class="f-settings"><h1 tabindex="-1">Your edition couldn’t load</h1><p>Please reload to try again.</p></div>';
@@ -149,32 +152,25 @@ export async function renderFeed(main, current = () => true) {
   } else if (['/sources','/taste','/editions'].includes(route)) {
     main.innerHTML = settingsPage(route);
   } else {
-    const page = /^\/editions\//.test(route) ? '/today' : route;
-    const items = page === '/watch' ? [...all.values()].filter(i=>i.format === 'Video') : page === '/library' ? [...all.values()] : page === '/queue' ? [...all.values()].filter(i=>choice(i.id).queued) : page === '/canon' ? [...all.values()].filter(i=>i.section === 'canon') : edition.items;
+    const archived = /^\/editions\//.test(route);
+    const page = archived ? '/home' : route;
+    const key = page.slice(1);
+    const items = page === '/library' ? [...all.values()] : page === '/queue' ? [...all.values()].filter(i=>choice(i.id).queued) : page === '/canon' ? [...all.values()].filter(i=>i.section === 'canon') : collectionItems(edition,[...all.values()],key);
     const filtered = filterItems(items, Object.fromEntries(new URLSearchParams(location.search)));
     let contents;
-    if (page === '/watch') {
-      contents = `<div class="f-section-head"><h2>The watchlist</h2><span>${filtered.length} selected videos</span></div><div class="f-video-grid">${filtered.map(videoCard).join('')}</div>${!filtered.length ? '<div class="f-empty"><h2>No matches.</h2><p>Try another topic or search.</p></div>' : ''}`;
-    } else if (page === '/library') {
-      contents = libraryView(items);
-    } else if (page === '/cut') {
-      contents = `<section class="f-section"><div class="f-section-head"><h2>Considered, then set aside</h2><span>${edition.cut.length} decisions</span></div>${edition.cut.map(c=>`<article class="f-cut"><h3>${external(c.url,esc(c.title))}</h3><p>${esc(c.reason)}</p><span>${esc(c.source)} · ${esc(c.signal)}</span></article>`).join('')}<p class="f-end">These are editorial judgements, not verdicts on the authors.</p></section>`;
-    } else {
-      contents = SECTIONS.map(section=>{
-        const group = filtered.filter(i=>(isConcept(i) ? 'primer' : i.section) === section.id);
-        return group.length ? `<section class="f-section"><div class="f-section-head"><h2>${section.label}</h2><span>${section.note}</span></div>${group.map(i=>card(i,items.findIndex(x=>x.id === i.id)+1,filtered[0] === i && page === '/today')).join('')}</section>` : '';
-      }).join('') || `<div class="f-empty"><h2>${page === '/queue' ? 'A little room for later.' : 'Nothing in this selection.'}</h2><p>${page === '/queue' ? 'Use Queue on any recommendation to keep it here.' : 'Try another topic or clear your filters.'}</p>${link('/today','Explore today’s edition →')}</div>`;
-    }
-    const stale = Date.now() - Date.parse(edition.publishedAt) > 36 * 3600 * 1000 && edition.date === latest.date;
-    main.innerHTML = `<div class="f-edition">${side(edition,page === "/library" ? libraryItems(items,state,new URLSearchParams(location.search).get("view") || "valuable") : items,page)}<div class="f-content">${stale ? '<p class="f-notice">The latest refresh is overdue. This is the last completed edition.</p>' : ''}${contents}${page === '/today' ? `<p class="f-end">Until the next edition. ${link('/editions','Browse the archive →')}</p>` : ''}</div></div>`;
+    if (page === '/library') contents = libraryView(items);
+    else if (page === '/cut') contents = (edition.cut || []).map(c=>`<article class="f-cut"><h3>${external(c.url,esc(c.title))}</h3><p>${esc(c.reason)}</p></article>`).join('');
+    else contents = `<div class="f-card-grid${['/home','/news'].includes(page) ? ' f-reading-grid' : ''}">${filtered.map(card).join('')}</div>${!filtered.length ? '<div class="f-empty"><h2>No matches.</h2><p>Try another search or topic.</p></div>' : ''}`;
+    const title = {'/home':'Home','/news':'News','/video':'Video','/audio':'Audio','/playlists':'Playlists','/library':'Library','/queue':'Saved for later','/canon':'Archive','/cut':'Editorial decisions'}[page] || 'Home';
+    main.innerHTML = `<div class="f-browse"><div class="f-page-head"><h1 tabindex="-1">${archived ? formatDate(edition.date) : title}</h1>${page === '/library' ? link('/subjects/machine-learning','Learn archive ↗') : `<span>Updated ${formatDate(edition.date)}</span>`}</div>${page === '/cut' ? '' : filters(page === '/library' ? libraryItems(items,state,new URLSearchParams(location.search).get('view') || 'valuable') : items)}${contents}</div>`;
   }
   if (!PUBLIC) {
     main.insertAdjacentHTML('afterbegin',`<span class="sr-only" role="status" data-feed-sync-status>${esc(sync.status)}</span><p class="f-notice f-save-notice" data-save-notice hidden></p>`);
     updateSaveNotice(sync);
   }
   if (storageFailed) main.insertAdjacentHTML('afterbegin','<p class="f-notice" role="status">Device storage is unavailable. Pending choices may not survive a reload. Export a backup before closing.</p>');
-  for (const image of main.querySelectorAll('.f-media img')) image.addEventListener('error',()=>image.remove(),{once:true});
-  document.title = `feed-purifier · ${route.startsWith('/item/') ? 'Read' : route === '/today' ? 'Today' : route.split('/')[1]}`;
+  for (const image of main.querySelectorAll('.f-media img')) image.addEventListener('error',()=>{ const card = image.closest('.f-card'); image.remove(); if(card && !card.classList.contains('f-video') && !card.querySelector('.f-concept-art')) card.classList.add('f-text-card'); },{once:true});
+  document.title = `feed-purifier · ${route.startsWith('/item/') ? 'Read' : route === '/home' ? 'Home' : route.split('/')[1]}`;
   return document.title;
 }
 

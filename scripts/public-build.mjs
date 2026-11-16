@@ -27,4 +27,4 @@ let sourceCommit = commit;
 try { sourceCommit = JSON.parse(await readFile(resolve(root,'deployment/source.json'),'utf8')).commit; } catch {}
 await writeFile(resolve(out,'build-info.json'),JSON.stringify({commit,sourceCommit,builtAt:new Date().toISOString(),audience:'public'}));
 await writeFile(resolve(out,'robots.txt'),'User-agent: *\nAllow: /\n');
-console.log('Built the public edition and watchlist. Library and feedback remain private.');
+console.log('Built public Home, News, Video, Audio and Playlists. Library and feedback remain private.');
