@@ -27,7 +27,7 @@ const choice = id => state[id] || {};
 export const isFeedRoute = path => /^\/(?:home|today|news|video|watch|audio|playlists|library|canon|queue|cut|sources|taste|editions(?:\/\d{4}-\d{2}-\d{2})?|item\/[a-z0-9-]+)?\/?$/.test(path);
 const json = async path => { const r = await fetch(path, {cache:'no-cache'}); if (!r.ok || !r.headers.get('content-type')?.includes('json')) throw new Error('Feed unavailable'); return r.json(); };
 async function loadFeed() {
-  if (!loading) loading = Promise.all(['/feed-data/latest.json','/feed-data/index.json','/feed-data/sources.json',...(!PUBLIC ? ['/feed-data/taste.json'] : [])].map(json)).then(values => {
+  if (!loading) loading = Promise.all(['/feed-data/latest.json','/feed-data/index.json',...(!PUBLIC ? ['/feed-data/sources.json','/feed-data/taste.json'] : [])].map(json)).then(values => {
     [latest, index, sources, taste] = values; editions.set(latest.date, latest); loadedAt = Date.now();
   }).catch(error => { loading = null; throw error; });
   return loading;
@@ -56,7 +56,7 @@ function card(item, withDescription = false) {
   const stamp = duration(item);
   return `<article class="f-item f-card${isMedia ? ' f-video' : ''}${!isMedia && !isConcept(item) && !item.image ? ' f-text-card' : ''}${choice(item.id).read ? ' muted' : ''}" data-feed-item="${item.id}">
     <a class="f-card-image" href="${esc(safeURL(item.url))}" target="_blank" rel="noopener noreferrer" aria-label="${esc(openLabel(item) + ' ' + item.title)}">${media(item)}${stamp ? `<span class="f-duration">${stamp}</span>` : ''}</a>
-    <div class="f-card-body"><h2>${external(item.url,esc(item.title))}</h2>${withDescription ? `<p class="f-card-description">${esc(cardSummary(item))}</p>` : ''}<div class="f-card-source" title="${esc(item.by || item.source)}">${esc(item.by || item.source)}</div><div class="f-card-meta">${lane(item.lane)}<span>${esc(formatLabel(item))}</span>${item.published ? `<time datetime="${esc(item.published)}">${formatDate(item.published)}</time>` : ''}${link(itemURL(item),'Details','f-card-details')}</div>${actions(item)}</div></article>`;
+    <div class="f-card-body"><h2>${external(item.url,esc(item.title))}</h2>${withDescription ? `<p class="f-card-description">${esc(cardSummary(item))}</p>` : ''}<div class="f-card-source" title="${esc(item.by || item.source)}">${esc(item.by || item.source)}</div><div class="f-card-meta">${lane(item.lane)}<span>${esc(formatLabel(item))}</span>${!isMedia ? `<span class="f-reading-time" title="${item.readingTimeBasis === 'page' ? 'Estimated from page length at 220 words per minute' : 'Approximate reading time; full text was not available to measure'}">${readingTime(item.minutes)} read</span>` : ''}${item.published ? `<time datetime="${esc(item.published)}">${formatDate(item.published)}</time>` : ''}${link(itemURL(item),'Details','f-card-details')}</div>${actions(item)}</div></article>`;
 }
 const icons = {
  home:'<path d="m3 10 9-7 9 7v10H3Z"/><path d="M9 20v-7h6v7"/>',
@@ -71,7 +71,7 @@ function header(page) {
   const libraryURL = PUBLIC ? `${OWNER_ORIGIN}/library` : '/library';
   document.querySelector('#library-navigation').innerHTML = [...['home','news','video','audio','playlists'].map(key=>['/'+key,key]),[libraryURL,'library']].map(([url,key]) => `<a data-library-link class="header-link${active === url ? ' is-current' : ''}${key === 'library' ? ' f-nav-library' : ''}" href="${url}"${active === url ? ' aria-current="page"' : ''}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[key]}</svg><span>${key[0].toUpperCase()+key.slice(1)}</span></a>`).join('');
   document.querySelector('#subject-navigation').innerHTML = `<form class="f-global-search" data-feed-search role="search"><label class="sr-only" for="feed-search">Search this section</label><input id="feed-search" name="q" type="search" value="${esc(new URLSearchParams(location.search).get('q') || '')}" placeholder="Search"><button type="submit" aria-label="Search"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></button></form>`;
-  document.querySelector('#notebook-footer').innerHTML = `<span class="f-footer-links">${link('/sources','Sources')}${link('/editions','Archive')}${PUBLIC ? `<a href="${esc(OWNER_ORIGIN + location.pathname + location.search)}">Sign in</a>` : link('/taste','Settings')}${external('https://github.com/antoniofrancaib/feed-purifier-web','GitHub')}</span>`;
+  document.querySelector('#notebook-footer').innerHTML = `<span class="f-footer-links">${external('https://github.com/antoniofrancaib/feed-purifier-web','GitHub')}${link('/editions','Archive')}</span>`;
 }
 function updateSaveNotice(client) {
   const notice = document.querySelector('[data-save-notice]');
@@ -107,7 +107,7 @@ function itemPage(item) {
   <section class="f-block"><h2>About</h2><p class="f-lede">${esc(item.why)}</p>${item.takeaway ? `<dl><dt>Summary</dt><dd>${esc(item.takeaway)}</dd></dl>` : ''}</section>
   <section class="f-block"><h2>The evidence</h2><p>${esc(item.signal || item.source)}</p><p class="f-hint">${esc(item.evidenceBasis || 'Source metadata')}. ${item.format === 'Preprint' ? 'This work has not necessarily been peer reviewed. ' : ''}</p></section></article>
   <aside><section class="f-block"><h2>At the source</h2><div class="f-evidence-links">${external(item.url,esc(item.source))}${(item.links || []).map(l=>external(l.url,esc(l.label))).join('')}</div></section>
-  ${!PUBLIC ? `<section class="f-block"><h2>Your feedback</h2><div class="f-reasons">${REASONS.map(r=>`<button class="f-btn" data-feed-action="reason" data-id="${item.id}" data-reason="${r}" aria-pressed="${s.reason === r}">${r}</button>`).join('')}</div><p class="f-hint">${link('/taste','Settings →')}</p></section>` : ''}</aside></div>`;
+  ${!PUBLIC ? `<section class="f-block"><h2>Your feedback</h2><div class="f-reasons">${REASONS.map(r=>`<button class="f-btn" data-feed-action="reason" data-id="${item.id}" data-reason="${r}" aria-pressed="${s.reason === r}">${r}</button>`).join('')}</div></section>` : ''}</aside></div>`;
 }
 function settingsPage(page) {
   if (page === '/sources') return `<div class="f-settings"><h1 tabindex="-1">Sources</h1><p class="f-intro">Research labs, journals, independent writers, podcasts and video collections. Refreshed every four days.</p><div class="f-source-list">${sources.sources.map(s=>{
@@ -147,7 +147,7 @@ export async function renderFeed(main, current = () => true) {
   } else if (route.startsWith('/item/')) {
     const item = all.get(route.split('/')[2]);
     main.innerHTML = item ? itemPage(item) : `<div class="f-settings"><h1 tabindex="-1">Item not found</h1>${link('/today','Back to today')}</div>`;
-  } else if (PUBLIC && ['/library','/taste','/queue','/cut'].includes(route)) {
+  } else if (PUBLIC && ['/library','/taste','/queue','/cut','/sources'].includes(route)) {
     location.replace(OWNER_ORIGIN + route); return;
   } else if (['/sources','/taste','/editions'].includes(route)) {
     main.innerHTML = settingsPage(route);
@@ -160,7 +160,7 @@ export async function renderFeed(main, current = () => true) {
     let contents;
     if (page === '/library') contents = libraryView(items);
     else if (page === '/cut') contents = (edition.cut || []).map(c=>`<article class="f-cut"><h3>${external(c.url,esc(c.title))}</h3><p>${esc(c.reason)}</p></article>`).join('');
-    else contents = `<div class="f-card-grid${['/home','/news'].includes(page) ? ' f-reading-grid' : ''}">${filtered.map(item=>card(item,page === '/home')).join('')}</div>${!filtered.length ? '<div class="f-empty"><h2>No matches.</h2><p>Try another search or topic.</p></div>' : ''}`;
+    else contents = `<div class="f-card-grid${['/home','/news'].includes(page) ? ' f-reading-grid' : ''}">${filtered.map(item=>card(item,['/home','/news'].includes(page))).join('')}</div>${!filtered.length ? '<div class="f-empty"><h2>No matches.</h2><p>Try another search or topic.</p></div>' : ''}`;
     const title = {'/home':'Home','/news':'News','/video':'Video','/audio':'Audio','/playlists':'Playlists','/library':'Library','/queue':'Saved for later','/canon':'Archive','/cut':'Editorial decisions'}[page] || 'Home';
     main.innerHTML = `<div class="f-browse"><div class="f-page-head"><h1 tabindex="-1">${archived ? formatDate(edition.date) : title}</h1>${page === '/library' ? link('/subjects/machine-learning','Learn archive ↗') : `<span>Updated ${formatDate(edition.date)}</span>`}</div>${page === '/cut' ? '' : filters(page === '/library' ? libraryItems(items,state,new URLSearchParams(location.search).get('view') || 'valuable') : items)}${contents}</div>`;
   }

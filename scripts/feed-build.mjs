@@ -19,8 +19,9 @@ export async function buildFeed(root, out, {publicOnly = false} = {}) {
     for (const item of [...e.items,...(e.earlier || [])]) if (!items.has(item.id)) items.set(item.id, {...item, edition:e.date});
   }
   await writeFile(resolve(out, 'feed-data/index.json'), JSON.stringify({editions, items:[...items.values()]}));
-  const sources = JSON.parse(await readFile(resolve(source, 'sources.json'), 'utf8'));
-  const directory = {sources:sources.sources.map(({id,name,url,lane,format,homepage})=>({id,name,url:homepage || url,lane,format,homepage}))};
-  await writeFile(resolve(out, 'feed-data/sources.json'), JSON.stringify(publicOnly ? directory : sources));
-  if (!publicOnly) await writeFile(resolve(out, 'feed-data/taste.json'), JSON.stringify({text:await readFile(resolve(source, 'taste.md'), 'utf8')}));
+  if (!publicOnly) {
+    const sources = JSON.parse(await readFile(resolve(source, 'sources.json'), 'utf8'));
+    await writeFile(resolve(out, 'feed-data/sources.json'), JSON.stringify(sources));
+    await writeFile(resolve(out, 'feed-data/taste.json'), JSON.stringify({text:await readFile(resolve(source, 'taste.md'), 'utf8')}));
+  }
 }

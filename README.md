@@ -8,8 +8,10 @@ The Paper interface uses compact navigation, search and topic filters.
 
 This is the public frontend. Library, the curator's feedback, saved items,
 reading history and original knowledge archive belong to a separate private
-application. The Library / Sign in links open that application. Public visitors
+application. The Library link opens that application. Public visitors
 can browse without an account; this deployment contains no write API.
+Home and News include short descriptions and approximate reading times. The
+footer contains GitHub and Archive; source administration and settings stay private.
 
 ## Develop
 

@@ -18,7 +18,7 @@ export function libraryItems(items, state, view = 'valuable') {
 // Public publication is an explicit field allowlist. Raw feedback, model traces,
 // collection failures and the old knowledge archive never enter this export.
 export function publicItem(item) {
-  const fields = ['id','url','title','lane','format','section','minutes','source','by','published','why','description','takeaway','image','fit','evidenceBasis','edition','symbol','durationSeconds','audioSuitable','videoCount'];
+  const fields = ['id','url','title','lane','format','section','minutes','readingTimeBasis','source','by','published','why','description','takeaway','image','fit','evidenceBasis','edition','symbol','durationSeconds','audioSuitable','videoCount'];
   const result = Object.fromEntries(fields.filter(key => item[key] !== undefined).map(key => [key,item[key]]));
   result.why = publicDescription(item.why) || item.title;
   if (result.description) {

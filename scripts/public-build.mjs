@@ -16,11 +16,14 @@ await mkdir(resolve(out,'fonts'),{recursive:true});
 for (const file of ['Inter-latin.woff2','Inter-latin-ext.woff2','Inter-LICENSE.txt','DepartureMono-Regular.woff2','DepartureMono-LICENSE.txt']) await cp(resolve(root,'public/fonts',file),resolve(out,'fonts',file));
 for (const [from,to] of [['src/styles.css','app.css'],['src/feed.css','feed.css']]) await cp(resolve(root,from),resolve(out,to));
 const html = (await readFile(resolve(root,'index.html'),'utf8'))
-  .replace('<head>','<head>\n  <script>globalThis.FEED_PUBLIC = true;</script>')
+  .replace(/<script>([\s\S]*?)<\/script>/, '<script src="/theme.js"></script>')
   .replace('  <link rel="stylesheet" href="/katex/katex.min.css">\n','');
+const theme = (await readFile(resolve(root,'index.html'),'utf8')).match(/<script>([\s\S]*?)<\/script>/)?.[1];
+if (!theme || /<script\s*>/.test(html)) throw new Error('Public scripts must be external for the strict CSP');
+await writeFile(resolve(out,'theme.js'),theme);
 await writeFile(resolve(out,'index.html'),html);
 await writeFile(resolve(out,'404.html'),'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page not found · feed</title><link rel="stylesheet" href="/app.css"><body><main><h1>Page not found.</h1><p><a href="/today">Back to the edition →</a></p></main></body></html>');
-await build({entryPoints:[resolve(root,'src/feed-shell.js')],bundle:true,minify:true,format:'esm',outfile:resolve(out,'app.js'),target:'es2022'});
+await build({entryPoints:[resolve(root,'src/feed-shell.js')],bundle:true,minify:true,format:'esm',outfile:resolve(out,'app.js'),target:'es2022',define:{'globalThis.FEED_PUBLIC':'true'}});
 let commit = process.env.VERCEL_GIT_COMMIT_SHA || null;
 try { commit ||= execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim(); } catch {}
 let sourceCommit = commit;

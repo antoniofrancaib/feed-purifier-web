@@ -60,6 +60,7 @@
 .f-reading-grid .f-text-card .f-card-image { display:none; }
 .f-reading-grid .f-card-meta { margin-top:6px; }
 .f-card-description { margin:0 0 12px; color:var(--secondary); font-size:13px; line-height:1.6; }
+.f-reading-time { white-space:nowrap; }
 .f-reading-grid .f-concept-art .f-tile { padding:10px; }
 .f-reading-grid .f-concept-art .f-tile b { font-size:32px; }
 .f-lane { white-space:nowrap; }
